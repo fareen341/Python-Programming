@@ -47,3 +47,10 @@ import functools
 l=[10,20,50,30,40]
 print(functools.reduce(lambda x,y:x if x>y else y,l))
 '''op-50'''
+
+#using key to sort the values
+t=[('a','a',2),('d','b',6),('c','c',4),('d','d',1)]
+key=lambda x:x[2]            #this will sort all the values at 2nd index of a tuple in a list
+t1=sorted(t,key=fun)
+print(t1)
+
