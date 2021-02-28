@@ -61,3 +61,16 @@ print(p)
 '''
 {fareen}
 '''
+
+#printing table using string formating
+n=7
+for i in range(11):
+    k=f'{n} x {i} = {i*n}'
+    l='{} x {} = {}'.format(n,i,n*i)
+    m='%d x %d = %d'%(n,i,n*i)
+    print(k)
+    print(l)
+    print(m)
+    
+
+
