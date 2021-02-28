@@ -1,0 +1,17 @@
+In python the textwrap module is used to format and wrap plain texts. There are some options to format the texts by adjusting the line breaks in the input paragraph. 
+To use these modules, we need to import the textwrap module in our code. 
+    ->The user first inputs a non-spaced string.
+    ->Then, in the second line, the user inputs the permissible width for each row.
+    ->The output will execute wrapped text.
+    
+    
+#Example:
+If the user inputs abcd in the first line and 2 in the second line, then the output will be:
+ab
+cd
+
+#Program
+from textwrap import fill
+n=input()
+m=int(input())
+print(fill(n,m))
