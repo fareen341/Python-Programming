@@ -1,3 +1,7 @@
+What is List Comprehensions?
+Comprehensions in Python provide us with a short and concise way to construct new sequences (such as lists, set, dictionary etc.) 
+using sequences which have been already defined.
+
 #List Comprehension
 l=[i for i in range(10)]
 '''op-[0,1,2,3,4,5,6,7,8,9]'''
