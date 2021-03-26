@@ -283,7 +283,7 @@ highest priority----->() -left to r
 Exponent (raise to the power)----->IMPORTANT (RIGHT TO LEFT)
 exponent is RIGHT TO LEFT Eg:
 2 + 3 ** 4 ** 2
-here the output is 43046723 and not 6561 bcoz it is right to left
+here the output is 43046723 and not 6563 bcoz it is right to left
 
 
 2)	
