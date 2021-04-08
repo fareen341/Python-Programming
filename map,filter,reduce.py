@@ -86,38 +86,7 @@ less_than_zero = list(filter(lambda x: x < 0, number_list))
 print(less_than_zero)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#taking input in a single line using and converting it into int:
+x=list(map(int,input().split()))
+print(x)
 
