@@ -182,6 +182,16 @@ shift 2 zero         0 0 0 0 0 0 0 1----->1
 (2**0=1)
 """
 
+#Always add 0 to the number shifted
+example:
+bin(8): 0000 1000
+8>>4
+so it will be 0000 0000  (convert all the shifted nymbers to zero)
+"""
+answer :0
+"""
+
+
 #AND
 a=20
 b=4
