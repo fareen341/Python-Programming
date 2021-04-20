@@ -128,6 +128,11 @@ b=a
 c=a is b                                    #True
 print(c)
 
+#In case of list the id are different 
+l1=[1]
+l2=[1]
+print(l1 is l2)           #False
+
 
 #Python Assignment Operators(+=, -=, *=, //= and so on)-----------------------------------------------------------------------------------------------------------------------------
 """
