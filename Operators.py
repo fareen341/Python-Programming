@@ -133,6 +133,29 @@ l1=[1]
 l2=[1]
 print(l1 is l2)           #False
 
+#but in list id of every element is different, but the element which are same have the same id
+a=[1,2,3,1,1,1]
+print(id(a))
+print(id(a[0]))
+print(id(a[1]))
+print(id(a[2]))
+print(id(a[3]))
+print(id(a[4]))
+print(id(a[5]))
+"""
+OP:
+1597228033856
+1597219694896
+1597219694928
+1597219694960
+1597219694896
+1597219694896
+1597219694896
+
+Here id of 0,3,4,5 position element has same id and rest all have different id
+"""
+
+
 
 #Python Assignment Operators(+=, -=, *=, //= and so on)-----------------------------------------------------------------------------------------------------------------------------
 """
