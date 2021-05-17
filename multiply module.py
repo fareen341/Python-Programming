@@ -30,6 +30,7 @@ __copyright__='copyright 2020'
 
 
 #IMPORTING USER DEFINED MODULE IN ANOTHER FILE
+#first import the module and than check the things related to it
 import multiply
 
 print(multiply.mult(3))                 #op---9
