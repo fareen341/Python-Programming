@@ -10,6 +10,8 @@ Syep 2:Download required libraries which is :
 Step 3:
 Import the pytesseract for extraction of the content and PIL for image
 Copy the path where tesseract-OCR application is intalled.
+
+Put the image in the same folder where the below program is kept. 
 """
 import pytesseract as tess
 tess.pytesseract.tesseract_cmd=r"C:\Program Files\Tesseract-OCR\tesseract.exe"
