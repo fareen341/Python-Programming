@@ -20,7 +20,7 @@ In backward always move no matter -ve and +ve index                             
 
 Points to remember--
 1.end and step can never be zero
-2.slicing never give index error
+2.slicing never give index error, but accessing index will give index error
 
 Indexing------------------------------------------------
 It have be -ve and +ve as well
