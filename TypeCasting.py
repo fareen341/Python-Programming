@@ -59,6 +59,11 @@ int('0b11',2)          #o/p-- 3
 
 int(10,'20')           #Error(Second argument cannot be a string first only can be a string) 
 
+#EVERY DATA TYPES(LIST,SET,DICT) TAKE DIFFERENT MEMORY LOCATION EXACPT STRING, INT, FLOAT EVERY, TUPLE
+#example:
+x=10
+y=10
+x is y    #true(true for string, int, float, tuple) false for(list,set,dict)
 
 #FLOAT
 float(10)              #float to Int  
