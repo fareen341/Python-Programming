@@ -37,3 +37,10 @@ print(deck)
 hand = random.sample(deck, k=5)         #get the 5 unique values
 print(hand)
 </pre>
+
+
+<h1>Exception</h1>
+
+![exception](https://user-images.githubusercontent.com/59610617/146680494-251995ff-b7cc-4e07-a2da-c456c9622378.png)
+
+
