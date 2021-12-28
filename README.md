@@ -43,4 +43,21 @@ print(hand)
 
 ![exception](https://user-images.githubusercontent.com/59610617/146680494-251995ff-b7cc-4e07-a2da-c456c9622378.png)
 
-
+<h1>UPLOADING CSV DATA TO MYSQL DATABASE</h1>
+<pre>
+1)Create database.
+2)Use database;
+3)Write code in proper format
+def csv_sql(request):
+    df = pd.read_csv('D:/userdata.csv')
+    x=df.head()
+    print(type(x))
+    print(x)
+    # format: mysql://user:password@host/db
+    engine = create_engine('mysql://root:@localhost/csvdb')
+    x.to_sql('userdatatable', con=engine)
+    return HttpResponse("done")
+   
+Note: if the file is xlsx then change pd.read_xlxs
+link followed: https://syntaxbytetutorials.com/sql-import-excel-file-to-table-with-python-pandas/
+</pre>
