@@ -58,6 +58,7 @@ def csv_sql(request):
     x.to_sql('userdatatable', con=engine)
     return HttpResponse("done")
    
+Output: userdatatable is a table name, we dont need to create table just create database and use it, then whatever name we provide in the to_sql parameter that name will be the name of the table.
 Note: if the file is xlsx then change pd.read_xlxs
 link followed: https://syntaxbytetutorials.com/sql-import-excel-file-to-table-with-python-pandas/
 </pre>
