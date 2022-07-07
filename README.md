@@ -1,3 +1,13 @@
+<h1>If else checking condition short way</h1>
+<pre>
+If the given condn is marks should be less than or equal to 350 and greater than or equal to 450
+then:
+print(350<=marks<=450)
+
+instead of writing:
+marks <=350 and marks >=450
+</pre>
+
 <h1>Random Module</h1>
 <pre>
 import random
