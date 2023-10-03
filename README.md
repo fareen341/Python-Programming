@@ -176,4 +176,22 @@ name[0:-3]        # far
 1. Get the 2nd larget value in a list
 2. The given list ["abc", "def"] convert the list in [["a", "b", "c"], ["d", "e", "f"]].
 3. Reverse the name "fareen".
-4. 
+4. Fine a pallindrome.
+5. Print pattern:
+<pre>
+*
+**
+***
+****
+*****
+</pre>
+
+# Program with solution
+1. Shortest way to check for pallindrome.
+<pre>
+name = "madam"
+if name == name[::-1]:
+	print("pallindrome")
+else:
+	print("not a pallindrome")	
+</pre>
