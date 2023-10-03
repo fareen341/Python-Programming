@@ -91,8 +91,14 @@ eg: li.reverse()        # [3, 9, 4, 8, 2, 1]
 3. sort() function:
 eg: li.sort()         # [1, 2, 3, 4, 8, 9]
 
-4. remove() function:
+4. remove() function:    it'll remove one item at a time, if we have two '3''s then it'll remove the first occurance from left to right.
 li.remove(1)        # [2, 3, 4, 8, 9]
+
+5. count() function:
+li.count(3)            # 1
+
+6. len()
+len(li)        # 7
 </pre>
 
 <b>Operations on set</b>
@@ -168,4 +174,6 @@ name[0:-3]        # far
 
 # Programs Practice
 1. Get the 2nd larget value in a list
-2. The given list ["abc", "def"] convert the list in [["a", "b", "c"], ["d", "e", "f"]]
+2. The given list ["abc", "def"] convert the list in [["a", "b", "c"], ["d", "e", "f"]].
+3. Reverse the name "fareen".
+4. 
