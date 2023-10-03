@@ -72,3 +72,68 @@ Output: userdatatable is a table name, we dont need to create table just create 
 Note: if the file is xlsx then change pd.read_xlxs
 link followed: https://syntaxbytetutorials.com/sql-import-excel-file-to-table-with-python-pandas/
 </pre>
+
+
+
+# Python Basics:
+We have str, list, tuple, set and dict.
+<b>Operations on set</b>
+1. insertion order are not preserved
+2. duplicate are not allowed
+3. indicated by{}
+4. set item are not indexed so slicing and indexing not allowed
+5. immutable
+6. we can add and remove item in set but cannot change the value by using index.
+7. main fucntionality of set is, union, difference & intersetion
+<pre>
+Example:
+Union:
+a={1,2,3,4,5}
+b={4,5,6,7,8,9}
+c = a | b      # Output: {1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+Intersetion:
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+intersection_set = set1 & set2
+print(intersection_set)  # Output: {3}
+
+Difference:
+set1 = {1, 2, 3, 4, 5}
+set2 = {3, 4, 5, 6, 7}
+difference_set = set1 - set2
+print(difference_set)  # Output: {1, 2}
+</pre>
+
+<b>Operations on dict</b>
+1. duplicated keys are not allowed
+2. indexing and slicing not allowed
+3. we can check the value of a perticuar key by giving its key
+<pre>
+
+d = {"red": 1, "blue": 2, "pink": 3, "black": 4}
+
+<b>Get the keys.</b>
+d.keys()         # dict_keys(['red', 'blue', 'pink', 'black'])
+
+<b>Get the values.</b>
+d.values()        # dict_values([1, 2, 3, 4])
+
+<b>Get the values using get().</b>
+d.get("red", "black")        # 1
+d.get("cyan", "black")       # black
+
+<b>Update the value of a key, or update the dict.</b>
+d["red"] = 55                           # {'red': 55, 'blue': 2, 'pink': 3, 'black': 4}
+d.update({"new_color": "green"})        # {'red': 5, 'blue': 2, 'pink': 3, 'black': 4, 'new_color': 'green'}
+</pre>
+
+<b>Map, Filter, Reduce</b>
+1. Map: Used when we want to do operation on all items on a list.
+2. Filter: Used when we want to do operations to get a single values, example to get the greatest value etc.
+3. Reduce: When we want to get one values, example sum etc.
+
+
+
+# Programs Practice
+1. 
