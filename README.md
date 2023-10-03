@@ -155,4 +155,4 @@ d.update({"new_color": "green"})        # {'red': 5, 'blue': 2, 'pink': 3, 'blac
 
 # Programs Practice
 1. Get the 2nd larget value in a list
-2. The given list ["abc", "def"] convert the list in [["a", "b", "c"], ["e", "f", "g"]]
+2. The given list ["abc", "def"] convert the list in [["a", "b", "c"], ["d", "e", "f"]]
