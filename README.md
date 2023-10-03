@@ -77,6 +77,24 @@ link followed: https://syntaxbytetutorials.com/sql-import-excel-file-to-table-wi
 
 # Python Basics:
 We have str, list, tuple, set and dict.
+<b>Operations on list</b>
+<pre>
+Functions of list:
+li = [1,2,8,4,9,3]
+
+1. copy() function:
+eg: new_li.copy(li)        # new_li will be same as li
+
+2. reverse() function:
+eg: li.reverse()        # [3, 9, 4, 8, 2, 1]
+
+3. sort() function:
+eg: li.sort()         # [1, 2, 3, 4, 8, 9]
+
+4. remove() function:
+li.remove(1)        # [2, 3, 4, 8, 9]
+</pre>
+
 <b>Operations on set</b>
 1. insertion order are not preserved
 2. duplicate are not allowed
