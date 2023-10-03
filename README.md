@@ -151,6 +151,19 @@ d.update({"new_color": "green"})        # {'red': 5, 'blue': 2, 'pink': 3, 'blac
 2. Filter: Used when we want to do operations to get a single values, example to get the greatest value etc.
 3. Reduce: When we want to get one values, example sum etc.
 
+<b>Operations on string</b>
+<pre>
+Slicing:
+
+name = "fareen"
+name[::-1]    # reverse string neeraf
+
+In positive i.e from left to right it add -1, and for negative from right to left it does +1
+Example:
+name[0:3]        # far
+name[0:-3]        # far
+
+</pre>
 
 
 # Programs Practice
