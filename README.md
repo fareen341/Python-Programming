@@ -76,7 +76,7 @@ link followed: https://syntaxbytetutorials.com/sql-import-excel-file-to-table-wi
 
 
 # Python Basics:
-We have str, list, tuple, set and dict.
+We have str, list, tuple, set and dict. </br>
 <b>Operations on list</b>
 <pre>
 Functions of list:
