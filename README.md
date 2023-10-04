@@ -83,7 +83,7 @@ Functions of list:
 li = [1,2,8,4,9,3]
 
 1. copy() function:
-eg: new_li.copy(li)        # new_li will be same as li
+eg: new_li = li.copy()        # new_li will be same as li
 
 2. reverse() function:
 eg: li.reverse()        # [3, 9, 4, 8, 2, 1]
