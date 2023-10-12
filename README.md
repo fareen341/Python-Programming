@@ -109,6 +109,11 @@ li.count(3)            # 1
 
 6. len()
 len(li)        # 7
+
+Other functions: remove, pop, index, extend, append, insert, clear
+
+Functions on tuple:
+count, index
 </pre>
 
 <b>Operations on set</b>
@@ -143,6 +148,8 @@ print(difference_set)  # Output: {1, 2}
 1. duplicated keys are not allowed
 2. indexing and slicing not allowed
 3. we can check the value of a perticuar key by giving its key
+
+Other functions: add, update, remove, pop, discard
 <pre>
 
 d = {"red": 1, "blue": 2, "pink": 3, "black": 4}
@@ -160,6 +167,9 @@ d.get("cyan", "black")       # black
 <b>Update the value of a key, or update the dict.</b>
 d["red"] = 55                           # {'red': 55, 'blue': 2, 'pink': 3, 'black': 4}
 d.update({"new_color": "green"})        # {'red': 5, 'blue': 2, 'pink': 3, 'black': 4, 'new_color': 'green'}
+
+<b>Get the tuple from the dict, using items()</b>
+d.items()		# dict_items([('red', 1), ('blue', 2), ('pink', 3), ('black', 4)])
 </pre>
 
 <b>Map, Filter, Reduce</b>
@@ -273,10 +283,104 @@ This is cuz it does the floor division, in case of minus floor acts as ceil and 
 It is the constructor for the class, and it allows you to perform any necessary setup or initialization for the object.
 </pre>
 
-<b>Function in python.</b>
+# Function in python.
+1. Required arguments: it is must we need to pass it.
 <pre>
-1. Non default argument should be after. Example: def sum(x, y, z=10).
-2. In case of args and kwargs, args should come first then kwargs, args support list, tuple, kwargs support python dict. def nums(*args, **kwargs).
+def calc_sum(a, b):
+	sum = a + b
+	return sum
+
+Not giving a, b gives missing required parameter error.
+</pre>
+
+2. Keyword arguments: It checks the keyword passed.
+<pre>
+def create_dict(key, value):
+    sum = {key: value}
+    return sum
+
+result = create_dict(value=20, key="Fareen")
+</pre>
+
+3. Default arguments: value = 20 is default value.
+Non default argument should be after. Example: def sum(x, y, z=10).
+<pre>
+def create_dict(key, value=20):
+    sum = {key: value}
+    return sum
+
+result = create_dict("Fareen")
+</pre>
+
+4. Variable-length arguments: In case of args and kwargs, args should come first then kwargs, args support list, tuple, kwargs support python dict. def nums(*args, **kwargs)
+
+5. Function scope, local & global variable.</br>
+i. Function have local space, meaning its variable value will be available inside that function only.</br>
+ii. If we use global variable it'll become global, now we can use it anywhere it'll be global, even if we give global inside the function that'll become global.</br>
+iii. In short: if we give global val even if it's inside the function, that'll become global, rest it has local space.</br>
+iv. Consider below example and give output:</br>
+<pre>
+<b>Program 1:</b>
+global val
+val = 10
+
+def print_val():
+    val = 20
+    return val
+
+result = print_val()
+print(result)
+print(val)
+
+<b>Program 2:</b>
+def print_val():
+    global val
+    val = 20
+    return val
+
+result = print_val()
+print(result)
+print(val)
+</pre>
+
+6. Anonymous/Lambda Functions.
+<pre>
+add = lambda x,y: x + y
+print(add(3,3))			# 6
+</pre>
+
+7. Higher order function.
+<pre>
+<b>i. Accepting argument as function.</b>
+def add(sqrt, y):
+    return sqrt(2) + y
+
+def sqrt(val):
+    result = val ** val
+    return result
+
+final = add(sqrt, 20)
+print(final)
+
+<b>ii. Returning function as result.</b>
+</pre>
+
+# Getting Help In Python(help, dir & pydoc).
+<pre>
+# Use of help
+For example if i want to get help for a module, i'll simply use:
+$ help(functools)
+If i want to get access of its one of the function as in i want to get help of reduce of functools.
+$ help(functools.reduce)
+
+# Use of dir function:
+The dir() function in Python is used to list all the attributes (including methods, properties, and other attributes) 
+of an object. It can be applied to various types of objects, including modules, classes, instances, and more. 
+$ dir(functools)
+
+# Use of pydoc module.
+So it is a module, this command will not work on shell, get outside of shell and run:
+$ python3 -m pydoc list
 </pre>
 
 # Programs Practice
