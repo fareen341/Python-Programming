@@ -541,7 +541,7 @@ print(stu_obj._Student__pswd)
 stu_obj.display()
 </pre>
 
-<b>Overloading & Overriding in Python.
+<b>Overloading & Overriding in Python.</b>
 <pre>
 <b>Method Overeiding: Same name of method but different definition.</b>
 class A:
