@@ -363,6 +363,46 @@ final = add(sqrt, 20)
 print(final)
 
 <b>ii. Returning function as result.</b>
+def create_multiplier(factor):
+    def multiplier(x):
+        return x * factor
+    return multiplier
+
+double = create_multiplier(2)
+triple = create_multiplier(3)
+
+print(double)			# will return function, cuz it's returning a function
+result1 = double(5)		# will pass 5 as argument in multiplier
+print(result1)  		# Output: 10
+
+# Another great example, this is called as function currying in javascript:
+def sum1(num1):
+    def sum2(num2):
+        def sum3(num3):
+            return num1 + num2 + num3
+        return sum3
+    return sum2
+
+rest = sum1(1)(1)(1)
+print(rest)			# 3
+</pre>
+
+7. Recursive Function: </br>
+i. A recursive function in Python is a function that calls itself in order to solve a problem. Recursive functions are useful for solving problems that can be broken down into smaller, similar sub-problems. It is different from above function, above function calling another function, here it'll call itself.</br>
+ii. To stop a function to to reach it recursion dept, we should give it a stop/break consition.</br>
+iii. It has base/stop case and recurssion case.
+<pre>
+def calc_sum(n):
+    if n == 1:		
+        return 1			# base/break case
+    n = n + calc_sum(n - 1)		# recursion case
+    return n
+
+res = calc_sum(5)
+print(res)
+
+In above code when we call calc_sum inside the function it gets minus 1 
+i.e calc_sum(n - 1) = calc_sum(4), so here n becomes 4, i.e n = 4, so n = n + calc_sum() in this it gets n value which is 4
 </pre>
 
 # Getting Help In Python(help, dir & pydoc).
