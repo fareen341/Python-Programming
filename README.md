@@ -522,6 +522,77 @@ And if child has own name property the it'd be Roma.
 
 ![hirarchical](https://github.com/fareen341/Python-Programming/assets/59610617/331315e8-6fb6-4be6-85f6-bed5825a9b64)
 
+<b>Encapsulation in Python.</b>
+It's important to note that encapsulation in Python is more of a convention than a strict enforcement. Access to protected and private members is still possible, but it's considered non-standard practice and should be avoided unless you have a compelling reason to access them directly. Encapsulation helps make code more maintainable and less error-prone by restricting direct access to internal implementation details of a class.
+<pre>
+class Student:
+    def __init__(self, name, aadhar, pswd):
+        self.name = name
+        self._aadhar = aadhar
+        self.__pswd = pswd
+
+    def display(self):
+        print(f"Name is: {self.name}, aadhar is: {self._aadhar}, pswd is: {self.__pswd}")
+
+stu_obj = Student("Fareen", 223, "Someval@val")
+print(stu_obj.name)
+print(stu_obj._aadhar)
+print(stu_obj._Student__pswd)
+stu_obj.display()
+</pre>
+
+<b>Overloading & Overriding in Python.
+<pre>
+<b>Method Overeiding: Same name of method but different definition.</b>
+class A:
+    def __init__(self):
+        self.name = "Fareen"
+
+    def print_name(self):
+        print(f"Name is: {self.name}")
+
+class C(A):
+    def print_name(self):
+        print(f"Name is: {self.name}")
+
+obj_A = A()
+obj_A.print_name()
+obj = C()
+obj.print_name()
+	
+<b>Overloading: Same method name with different number of parameters.</b>
+class MathOperations:
+    def add(self, a, b):
+        return a + b
+
+    def add(self, a, b, c):
+        return a + b + c
+</pre>
+
+<b>Use of super() method in python.</b></br>
+In Python, super() is a built-in function that is used to call a method from a parent or superclass. It is particularly useful in the context of method overriding, where a subclass provides a specific implementation of a method that is already defined in its superclass. super() allows you to invoke the parent class's version of a method while extending or modifying its behavior in the child class.</br>
+
+The primary use of super() is to ensure that the parent class's implementation of a method is called before adding or extending functionality in the child class. This is important to maintain code reusability and to avoid duplicating code that already exists in the parent class.</br>
+
+In below example we extend the parent function addition in child by using the same function with adding child's functionality too.
+<pre>
+class Parent:
+    def show(self):
+        sum = 10 + 10
+        print(f"This is the parent class sum {sum}")
+        return sum
+
+class Child(Parent):
+    def show(self):
+        parent_sum = super().show()  # Call the parent class's show method
+        child_sum = parent_sum + 10
+        print(f"This is the parent class sum {child_sum}")
+        return child_sum
+
+child = Child()
+child.show()
+
+</pre>
 
 # Programs Practice
 1. Get the 2nd larget value in a list
