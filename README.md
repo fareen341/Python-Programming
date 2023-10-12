@@ -405,6 +405,18 @@ In above code when we call calc_sum inside the function it gets minus 1
 i.e calc_sum(n - 1) = calc_sum(4), so here n becomes 4, i.e n = 4, so n = n + calc_sum() in this it gets n value which is 4
 </pre>
 
+8. What will be the output of the following function?
+<pre>
+def power_function(exponent):
+    # This is the function factory
+    def power(x):
+        return x ** exponent
+    return power
+
+result = power_function(3)(2)
+print(result)
+</pre>
+
 # Getting Help In Python(help, dir & pydoc).
 <pre>
 # Use of help
