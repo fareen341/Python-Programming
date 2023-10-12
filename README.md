@@ -462,6 +462,7 @@ Calculate each digit raised to the third power, it is pow of 3 not num ** 3:
 12. Convert two list into dict x = [1,2,3,4], y = ["a", "b", "c", "d"].
 13. Find the count of word "python" in the given string, str = "python is great, it has many features, python".
 14. Find the common element in two str, name = "Seema" and name = "FarEen", by repetation of words and without repetation also. Also ignoring the case.
+15. Calculate sum of all numbers in a list using recursion nums = [1,2,3,4,5,6] also print sum as fibonacci series like 1+2 = 3 so on.
 
 # Program with solution
 1. Shortest way to check for pallindrome.
@@ -505,3 +506,21 @@ init file: In Django, the __init__.py file is a special file that indicates to P
 containing it should be considered a Python package or module.
 </pre>
 
+15. Calculate sum of all numbers in a list using recursion nums = [1,2,3,4,5,6] also print sum as fibonacci series like 1+2 = 3 so on.
+<pre>
+def recursive_sum(n):
+    if not n:  # Base case: the list is empty
+        return 0
+    else:
+        rec = recursive_sum(n[1:])
+        sum = n[0] + rec
+        print(f'{n[0]} + {rec} = {sum}')
+        return sum
+
+n = [1, 2, 7, 1, 9]
+x = n.reverse()
+result = recursive_sum(n)
+print(result)
+
+Note: taking rec in a variable cuz, if we take recursive_sum(n[1:]) it'll call the self function again
+</pre>
