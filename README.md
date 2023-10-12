@@ -116,14 +116,16 @@ Functions on tuple:
 count, index
 </pre>
 
-<b>Operations on set</b>
+<b>Operations on set, frozenset</b>
 1. insertion order are not preserved
 2. duplicate are not allowed
 3. indicated by{}
 4. set item are not indexed so slicing and indexing not allowed
 5. immutable
 6. we can add and remove item in set but cannot change the value by using index.
-7. main fucntionality of set is, union, difference & intersetion
+7. main fucntionality of set is, union, difference & intersetion</br>
+
+<b>The difference in set and frozenset is, in a short way set is kind of like a list and frozenset is kind of like a tuple.</b>
 <pre>
 Example:
 Union:
@@ -434,6 +436,92 @@ $ dir(functools)
 So it is a module, this command will not work on shell, get outside of shell and run:
 $ python3 -m pydoc list
 </pre>
+
+# OOPs In Python.
+
+<b>Python Classes and Objects.</b>
+<pre>
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __str__(self):
+        print(f"Hello {self.name}, your age is {self.age}")
+
+p1 = Person("Fareen", 26)
+print(p1.name)				# Fareen		
+p1.__str__()				# Hello Fareen, your age is 26
+
+# likewise create many objects
+</pre>
+
+<b>Constructors in Python.</b></br>
+In python `__init__()` function is acts as constructir and can be used to pass initial values. Consider the above example.
+
+<b>Destructor in python using del, `__del__()` method:</b>
+<pre>
+In python `__del__()` is used to delete an object,
+Example: below example print the statement before deleting the object.
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def __del__(self):
+        print(f"This is going to delete: {self.name}")
+	
+p1 = Person("Fareen")
+print(p1.name)				# Fareen
+del p1
+print(p1.name)				# NameError: name 'p1' is not defined
+
+
+<b>There are other methods in class like `__len__()`, `__setitem__()`, `__getitem__()` but they are not very imp.</b>
+</pre>
+
+<b>Inheritance in Python</b>
+1. Single Inheritance.
+2. Multiple Inheritance.
+
+![multiple](https://github.com/fareen341/Python-Programming/assets/59610617/90db5532-df97-4021-bf79-4236fbbf9f3e)
+
+
+<pre>
+# Base classes
+class A:
+    def __init__(self):
+        self.name = "Fareen"
+
+class B:
+    def __init__(self):
+        self.name = "Anamika"
+
+# Derived class with multiple inheritance
+class C(B, A):
+    def __init__(self):
+        self.name = "Roma"
+
+    def __str__(self):
+        print(f"Name: {self.name}")
+
+obj = C()
+obj.__str__()
+
+
+Python support multiple inheritance, In above class, class C is getting property from A and B also
+So here python resolve this conflict by checking the first class given inside C class which is B so 'Anamika' will be printed.print
+If it'd be A class first then it'd be Fareen
+And if child has own name property the it'd be Roma.
+</pre>
+
+3. Multi-Level Inheritance.
+
+![multilevel](https://github.com/fareen341/Python-Programming/assets/59610617/96e866d5-acc9-40a3-a8ad-b5df4b002912)
+
+4. Hierarchical Inheritance.
+
+![hirarchical](https://github.com/fareen341/Python-Programming/assets/59610617/331315e8-6fb6-4be6-85f6-bed5825a9b64)
+
 
 # Programs Practice
 1. Get the 2nd larget value in a list
