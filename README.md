@@ -645,7 +645,29 @@ st_obj.common_details("Fareen")
 te_obj = Teacher()
 te_obj.salary_details(400000)
 
+<b>Concrete Methods in Abstract Base Classes</b>
+In above clas if we dont override common_details function in child class, it'll give error.
+So we need not to override Concrete Methods, this have definition in Abstract/Common class only.
 
+Example:
+
+from abc import ABC, abstractclassmethod
+
+class Person(ABC):
+    @abstractclassmethod
+    def common_details(self):
+        pass
+
+    def description(self):
+        print("This if from common class.")
+
+class Student(Person):
+    def common_details(self):
+        print("This if from child.")
+
+st_obj = Student()
+st_obj.common_details()
+st_obj.description()
 </pre>
 
 
