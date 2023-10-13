@@ -471,15 +471,18 @@ chr(65)			# A
 ord('A')		# 65
 </pre>
 
-4. floor and ceil
+4. math module
 <pre>
-from math import floor, ceil
+import math
 
-floor(4.5)		# 4
-floor(4.8)		# 4
-
-ceil(4.5)		# 5
-ceil(4.1)		# 5
+# with positive numbers 
+print(math.floor(3.9))		# 3
+print(math.ceil(3.1))		# 4
+	
+# with negative numbers 
+The above become vice versa, 3 become 4 and 4 becomes 3.
+That is because it rounds to the closest floor number. 
+-4 -3 -2 -1 0 1 2 3 4
 </pre>
 
 5. enumerate(): enumerate() is a built-in function in Python that is used to iterate over a sequence (such as a list, tuple, or string) while keeping track of the index or position of each item. It returns an iterator that generates pairs of the form (index, item) for each item in the sequence.
@@ -511,20 +514,6 @@ Print number in negative in range from -1 to -10.
 8. To get binary.
 <pre>
 bin(3)		# 0b11
-</pre>
-
-9. math module
-<pre>
-import math
-
-# with positive numbers 
-print(math.floor(3.9))		# 3
-print(math.ceil(3.1))		# 4
-	
-# with negative numbers 
-The above become vice versa, 3 become 4 and 4 becomes 3.
-That is because it rounds to the closest floor number. 
--4 -3 -2 -1 0 1 2 3 4
 </pre>
 
 # Extra points
