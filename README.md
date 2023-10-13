@@ -407,7 +407,31 @@ In above code when we call calc_sum inside the function it gets minus 1
 i.e calc_sum(n - 1) = calc_sum(4), so here n becomes 4, i.e n = 4, so n = n + calc_sum() in this it gets n value which is 4
 </pre>
 
-8. What will be the output of the following function?
+8. Decorators in Function.
+In Python, decorators are a powerful and flexible way to modify or enhance the behavior of functions or methods without changing their source code.
+<pre>
+Example:
+def my_decorator(say_hello):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        say_hello()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+# Calling the decorated function
+say_hello()
+
+O/p:
+Something is happening before the function is called.
+Hello!
+Something is happening after the function is called.
+</pre>
+
+9. What will be the output of the following function?
 <pre>
 def power_function(exponent):
     # This is the function factory
@@ -670,18 +694,89 @@ st_obj.common_details()
 st_obj.description()
 </pre>
 
-
-
-<b></b></br>
+<b>Decorators in Class</b></br>
 <pre>
+Check out decorators in function
+Decorators is also called as Metaprogramming.
 
+Example:
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        print("Something is happening before the method is called.")
+        result = func(*args, **kwargs)
+        print("Something is happening after the method is called.")
+        return result
+    return wrapper
+
+class MyClass:
+    def __init__(self, value):
+        self.value = value
+
+    @my_decorator
+    def greet(self):
+        print(f"Hello, my value is {self.value}")
+
+# Creating an instance of the class
+obj = MyClass(42)
+
+# Calling the decorated method
+obj.greet()
 </pre>
 
-
-
-<b></b></br>
+<b>Class Method & Static Method</b></br>
+In summary, `@classmethod` is used when you need to work with or modify class-specific attributes and methods, while `@staticmethod` is used for utility functions that are related to a class but don't need access to class or instance-specific data. Both decorators help organize and encapsulate code within a class and make it more readable and maintainable.
 <pre>
+<b>Class Method</b>
+class Person:
+    age = 20
 
+    def __init__(self, age):
+        self.age = age
+
+    @classmethod
+    def age_increment(cls):
+        inc = cls.age + 4
+        print(inc)
+
+    def age_decrement(cls):
+        dec = cls.age - 2
+        print(dec)
+
+p = Person(30)
+p.age_increment()
+p.age_decrement()
+
+In above code when we can access/modify class variable by using classmethod, we use cls for class method.isinstance
+In age_decrement function we have taken cls, but that does not mean it is class method instead it is self only.
+It gets class method only after using that decorator
+
+<b>Static Method</b>
+It is a regular function which is inside class.
+In below example we must pass self or cls, to make it a class method, but if we have requirement to make it a 
+regular function and inside the class then use decorator staticmethod.
+class Person:
+    age = 20
+
+    def __init__(self, age):
+        self.age = age
+
+    @classmethod
+    def age_increment(cls):
+        inc = cls.age + 4
+        print(inc)
+
+    def age_decrement(cls):
+        dec = cls.age - 2
+        print(dec)
+
+    @staticmethod
+    def display_greetings():
+        print("Hello!")
+
+p = Person(30)
+p.age_increment()
+p.age_decrement()
+p.display_greetings()
 </pre>
 
 
