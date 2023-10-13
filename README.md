@@ -86,7 +86,8 @@ link followed: https://syntaxbytetutorials.com/sql-import-excel-file-to-table-wi
 # Python Concept
 1. Differentiate between .py and .pyc files?
 <pre>
-
+.py files contain human-readable Python source code, while .pyc files contain compiled Python bytecode used for more efficient execution.
+And which is understadable by intepreter.
 </pre>
 
 # Python Basics
@@ -205,6 +206,8 @@ Example:
 name[0:3]        # far
 name[0:-3]        # far
 
+String methods:
+use help(str)
 </pre>
 
 <b>Operators</b>
@@ -280,6 +283,18 @@ deep_copied_list[1] = 88
 print(original_list)
 print(deep_copied_list)
 </pre>
+
+# Conditional Execution
+<pre>
+Marks should be less than or equal to 350 and greater than or equal to 450
+if marks <= 350 and marks <= 450:
+	pass
+
+Instead of above use:
+if `50<= marks <=450`:
+	pass	
+</pre>
+
 
 # Function in python.
 1. Required arguments: it is must we need to pass it.
@@ -493,8 +508,24 @@ Print reverse number using range from 10 to 0.
 Print number in negative in range from -1 to -10.
 </pre>
 
+8. To get binary.
+<pre>
+bin(3)		# 0b11
+</pre>
 
-<pre></pre>
+9. math module
+<pre>
+import math
+
+# with positive numbers 
+print(math.floor(3.9))		# 3
+print(math.ceil(3.1))		# 4
+	
+# with negative numbers 
+The above become vice versa, 3 become 4 and 4 becomes 3.
+That is because it rounds to the closest floor number. 
+-4 -3 -2 -1 0 1 2 3 4
+</pre>
 
 # Extra points
 <pre>
@@ -846,10 +877,15 @@ p.age_decrement()
 p.display_greetings()
 </pre>
 
-
-<b></b></br>
+# Module
 <pre>
+There are built-in module, eg math. 
+import math
 
+to create user-defined module:
+Step 1: create a module file eg, multiply_module.py
+Step 2: create a function with multiply functionality, accepting parameters.
+Step 3: import multiply_module
 </pre>
 
 <b></b></br>
