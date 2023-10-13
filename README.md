@@ -941,6 +941,49 @@ per1 = Person(44)
 per1.new_method()
 </pre>
 
+# Regular Expression
+<b>Match & Search</b>: The match() function in Python's re module is used to determine whether a regular expression pattern matches at the beginning of a string. It attempts to match the pattern from the start of the string, and if a match is found at the beginning, it returns a match object; otherwise, it returns None.
+<pre>
+import re
+
+text = "The python is a great language, it has many modules, python is my fav."
+pattern = "python"
+# match
+match = re.match(pattern, text)				# check the first occurance, so it'll search for python in first match
+
+# search
+match = re.search(pattern, text)			# check the entire string and return the first occurance
+if match:
+    print(f"Match Found: {match.group()}")		# blank outout
+</pre>
+
+<b>Split</b>
+<pre>
+text = "The python is a great language, it has many modules, python is my fav @python."
+pattern = r"[@, p]"			# this means split by @ or comma or space or p
+match = re.split(pattern, text)
+print(match)				
+	
+Output:
+['The', '', 'ython', 'is', 'a', 'great', 'language', '', 'it', 'has', 'many', 'modules', '', '', 'ython', 'is', 'my', 'fav', '', '', 'ython.']
+
+Note: wherever it finds the given patten like 'p' it'll consided it as '', same for all.
+</pre>
+
+<b>Creating pattern</b>
+<pre>
+pattern for indian mobile number.
+r'^9\d{9}$'
+
+To be continue
+</pre>
+
+
+
+
+
+
+
 # Programs Practice
 1. Get the 2nd larget value in a list
 2. The given list ["abc", "def"] convert the list in [["a", "b", "c"], ["d", "e", "f"]].
