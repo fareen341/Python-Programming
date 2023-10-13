@@ -481,7 +481,7 @@ print(p1.name)				# NameError: name 'p1' is not defined
 
 <b>Inheritance in Python</b>
 1. Single Inheritance.
-2. Multiple Inheritance.
+2. Multiple Inheritance: Method Resolution Order (MRO), It helps resolve potential ambiguities in multiple inheritance situations and provides a clear sequence for method lookup. You can access the MRO of a class using ClassName.__mro__, which will show you the order in which the classes are considered during method lookup.
 
 ![multiple](https://github.com/fareen341/Python-Programming/assets/59610617/90db5532-df97-4021-bf79-4236fbbf9f3e)
 
@@ -591,8 +591,84 @@ class Child(Parent):
 
 child = Child()
 child.show()
+</pre>
+
+<b>Duck Typing.</b></br>
+1. Duck typing is a concept in dynamic programming languages like Python that focuses on the behavior of an object rather than its type or class.
+2. In below example, the get_length function does not check the type of the obj parameter. Instead, it relies on the fact that various objects (strings, lists, tuples) all support the len() function. As long as an object behaves like it has a length, it can be passed to this function.
+3. Duck typing promotes flexibility and code reusability by allowing you to work with a wide range of objects without being overly concerned with their specific types. However, it also places responsibility on the developer to ensure that objects passed to functions or methods behave as expected.
+4. The term "duck typing" comes from the saying, "If it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck."
+<pre>
+def get_length(obj):
+    return len(obj)
+
+# You can pass different types, and it will work as long as they support len().
+string_length = get_length("Hello, World!")  # Works
+list_length = get_length([1, 2, 3])           # Works
+tuple_length = get_length((4, 5, 6))          # Works
+
+# There are no type checks; it works based on behavior.
+</pre>
+
+<b>Abstract Base Classes.</b></br>
+1. This is same as which we have in django Abstract class.
+2. Here also this class acts as a structure only and dont allow us to cannot create object of this class. Likewise in django it does'nt create class for Abstract base class.
+3. We use Meta class in django to make it Abstract class. Likewise in python we use abstractmethod to make a method as abstractmethod.
+<pre>
+from abc import ABC, abstractclassmethod
+
+
+class Person(ABC):
+
+    @abstractclassmethod
+    def common_details(self):
+        pass
+
+class Student(Person):
+    def common_details(self, name):
+        self.name = name
+        print(name)
+
+class Teacher(Person):
+    def common_details(self):
+        pass
+
+    def salary_details(self, salary):
+        print(salary)
+
+# p_obj = Person()                # TypeError: Can't instantiate abstract class Person with abstract methods common_details
+
+st_obj = Student()
+st_obj.common_details("Fareen")
+
+
+te_obj = Teacher()
+te_obj.salary_details(400000)
+
 
 </pre>
+
+
+
+<b></b></br>
+<pre>
+
+</pre>
+
+
+
+<b></b></br>
+<pre>
+
+</pre>
+
+
+<b></b></br>
+<pre>
+
+</pre>
+
+
 
 # Programs Practice
 1. Get the 2nd larget value in a list
