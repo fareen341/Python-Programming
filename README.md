@@ -877,11 +877,29 @@ Step 2: create a function with multiply functionality, accepting parameters.
 Step 3: import multiply_module
 </pre>
 
-<b></b></br>
+# Logger
+1. We do print statement but that is limited to terminal, meaning it's not getting stored in some file. We log statements to get infor eg: we use logger.error() in exception to check what is causing the error in live using the log file.
+2. Below example will created a app.log file and store all the log info in that file only.
+3. By default, Python's logging module does not automatically manage log retention, so logs will accumulate in the log file until the file system runs out of space or you manually manage log rotation.
 <pre>
+import logging
+# Configure logging
+logging.basicConfig(filename='app.log', level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
+# Create a logger
+logger = logging.getLogger(__name__)
+
+
+logger.info("STMT")
+logger.error("raised error")
+
+Output:
+2023-10-13 11:11:49,363 - __main__ - INFO - STMT
+2023-10-13 11:16:02,165 - __main__ - ERROR - raised error
 </pre>
 
+# Date & Time
+For this refer jupyter notebook.
 
 # Programs Practice
 1. Get the 2nd larget value in a list
