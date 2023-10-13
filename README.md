@@ -511,9 +511,16 @@ Print reverse number using range from 10 to 0.
 Print number in negative in range from -1 to -10.
 </pre>
 
-8. To get binary.
+8. To get binary, bin function.
 <pre>
 bin(3)		# 0b11
+</pre>
+
+9. isinstance() 
+<pre>
+isinstance is a built-in Python function used to check if an object belongs to a specified class or type.
+Example:
+$ isinstance("fareen", (list, str))		# True
 </pre>
 
 # Extra points
@@ -958,6 +965,7 @@ else:
 2. What is dunder method?
 3. What is `__init__()` in python?
 4. Difference betweeb `__init__()` method and `__init__.py` file?
+5. What is self in class?
 
 
 # Interview Questions with answer:
@@ -984,6 +992,14 @@ init file: In Django, the __init__.py file is a special file that indicates to P
 containing it should be considered a Python package or module.
 </pre>
 
+5. What is self in class?
+In Python, self is a convention, and not a reserved keyword, used to represent the instance of a class within the class itself. It is the first parameter of instance methods in Python. When you define a method within a class, the method should accept self as its first parameter.
+
+6. 
+
+
+
+# Programming Answers
 15. Calculate sum of all numbers in a list using recursion nums = [1,2,3,4,5,6] also print sum as fibonacci series like 1+2 = 3 so on.
 <pre>
 def recursive_sum(n):
