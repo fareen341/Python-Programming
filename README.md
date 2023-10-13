@@ -247,42 +247,24 @@ a = 10, b = 10
 print(a is b)			# True, cuz values is same but when b = 20 the it'll be False
 </pre>
 
-<b>Extra functions:</b>
+# Deep vs Shallow copy
+Deep copy creates the entirely new object which is independent of original object, where as shallow copy does not creates new object instead it refer the same original object.
 <pre>
-1. Memory location
-a = 10
-id(a)			# will give memory location of a
+import copy
 
-2. chr() function, to get number from unicode
-chr(65)			# A
+# shallow copy
+original_list = [1,2,3]
+shallow_copied_list = copy.copy(original_list)
+shallow_copied_list[1] = 88
+print(shallow_copied_list)
+print(original_list)
 
-3. ord() function to get unicode from character
-ord('A')		# 65
-
-4. floor and ceil
-from math import floor, ceil
-
-floor(4.5)		# 4
-floor(4.8)		# 4
-
-ceil(4.5)		# 5
-ceil(4.1)		# 5
-</pre>
-
-<b>Extra points</b>
-<pre>
-1. Floating point error:
-0.1 + 0.2			# 0.30000000000000004
-
-Getting wong error, we should get 0.3
-
-2. When we do -4 // 3, we should get one as quotent, but we get -2, 
--4 // 3		# -2
-
-This is cuz it does the floor division, in case of minus floor acts as ceil and vice versa.
-
-3. The __init__ method: it is called automatically when you create a new instance of a class (an object). 
-It is the constructor for the class, and it allows you to perform any necessary setup or initialization for the object.
+# deep copy
+original_list = [1,2,3]
+deep_copied_list = copy.deepcopy(original_list)
+deep_copied_list[1] = 88
+print(original_list)
+print(deep_copied_list)
 </pre>
 
 # Function in python.
@@ -442,6 +424,68 @@ def power_function(exponent):
 result = power_function(3)(2)
 print(result)
 </pre>
+
+<b>Extra functions</b></br>
+1. Memory location
+<pre>
+a = 10
+id(a)			# will give memory location of a
+</pre>
+
+2. chr() function, to get number from unicode
+<pre>
+chr(65)			# A
+</pre>
+
+3. ord() function to get unicode from character
+<pre>
+ord('A')		# 65
+</pre>
+
+4. floor and ceil
+<pre>
+from math import floor, ceil
+
+floor(4.5)		# 4
+floor(4.8)		# 4
+
+ceil(4.5)		# 5
+ceil(4.1)		# 5
+</pre>
+
+5. enumerate(): enumerate() is a built-in function in Python that is used to iterate over a sequence (such as a list, tuple, or string) while keeping track of the index or position of each item. It returns an iterator that generates pairs of the form (index, item) for each item in the sequence.
+<pre>
+fruits = ['apple', 'banana', 'cherry']
+
+for index, fruit in enumerate(fruits):
+    print(f"Index {index}: {fruit}")
+</pre>
+
+6. eval(): Essentially, it allows you to run Python code from a string.
+<pre>
+nums_list = "[1,2,3,4]"
+print(type(nums_list))			# <class 'str'>
+result = eval(nums_list)
+print(type(result))			# <class 'list'>
+</pre>
+
+
+
+<pre></pre>
+
+# Extra points
+<pre>
+1. Floating point error:
+0.1 + 0.2			# 0.30000000000000004
+
+Getting wong error, we should get 0.3
+
+2. When we do -4 // 3, we should get one as quotent, but we get -2, 
+-4 // 3		# -2
+
+This is cuz it does the floor division, in case of minus floor acts as ceil and vice versa.
+</pre>
+
 
 # Getting Help In Python(help, dir & pydoc).
 <pre>
