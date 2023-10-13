@@ -659,9 +659,22 @@ print(stu_obj._Student__pswd)
 stu_obj.display()
 </pre>
 
+5. Diamond Problem.
+i. To address this issue, programming languages that support multiple inheritance typically provide rules and mechanisms for method resolution, such as the C3 linearization algorithm used in Python's method resolution order (MRO).</br>
+ii. This is same as multiple inheritance.
+<pre>
+   A
+  / \
+ B   C
+  \ /
+   D
+
+
+</pre>
+
 <b>Overloading & Overriding in Python.</b>
 <pre>
-<b>Method Overeiding: Same name of method but different definition.</b>
+<b>Method Overriding: Same name of method but different definition.</b>
 class A:
     def __init__(self):
         self.name = "Fareen"
@@ -709,6 +722,19 @@ class Child(Parent):
 
 child = Child()
 child.show()
+
+
+<b>super in constructor</b>
+class Vehicle:
+    def __init__(self, name):
+        self.name = name
+
+class Car(Vehicle):
+    def __init__(self, name, color):
+        super().__init__(name)  # Call the constructor of the base class
+        self.color = color
+
+my_car = Car("Sedan", "Blue")
 </pre>
 
 <b>Duck Typing.</b></br>
