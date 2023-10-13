@@ -114,6 +114,16 @@ Other functions: remove, pop, index, extend, append, insert, clear
 
 Functions on tuple:
 count, index
+
+<b>Differentiate between append() and extend().</b>
+append() adds a single element to the end of a list, while extend() adds multiple elements from an iterable to the end of a list.
+Example:
+
+nums = [1,2,3,4]
+nums.append(4)
+print(nums)                 #  [1,2,3,4,4]
+nums.extend([5,6])
+print(nums)                 #  [1,2,3,4,4,5,6]
 </pre>
 
 <b>Operations on set, frozenset</b>
@@ -469,6 +479,15 @@ result = eval(nums_list)
 print(type(result))			# <class 'list'>
 </pre>
 
+7. range() and xrange() function
+<pre>
+xrange(): (Python 2 only)
+range(): (Python 2 and Python 3)
+
+Example:
+Print reverse number using range from 10 to 0.
+Print number in negative in range from -1 to -10.
+</pre>
 
 
 <pre></pre>
