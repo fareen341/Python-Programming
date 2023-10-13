@@ -83,9 +83,13 @@ link followed: https://syntaxbytetutorials.com/sql-import-excel-file-to-table-wi
 
 
 
+# Python Concept
+1. Differentiate between .py and .pyc files?
+<pre>
 
+</pre>
 
-# Python Basics:
+# Python Basics
 We have str, list, tuple, set and dict. </br>
 <b>Operations on list</b>
 <pre>
