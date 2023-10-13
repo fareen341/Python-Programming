@@ -668,6 +668,10 @@ te_obj.salary_details(400000)
 
 </pre>
 
+<b></b></br>
+<pre>
+
+</pre>
 
 
 # Programs Practice
