@@ -908,6 +908,39 @@ Output:
 # Date & Time
 For this refer jupyter notebook.
 
+# Closures
+1. Basically closure store the state of outer function. It is same in javascript.
+2. Inner function can access data of outer/parent function with the help of closure.
+<pre>
+def outer_func(x):
+    def inner_func(y):              # it holds the value of x in the closure
+        return x + y
+    return inner_func
+
+res = outer_func(4)(4)
+print(res)
+</pre>
+
+# Monkey Patching
+1. Monkey patching is a programming technique in which you modify or extend the behavior of existing classes or modules at runtime, typically without altering the source code of those classes or modules. It's called "monkey patching" because you're making changes to code in a way that might be considered as a "monkey" playing with it.
+2. This technique is often used when you need to fix bugs or add functionality to libraries or modules for which you don't have access to the source code. Monkey patching can be a quick and convenient solution, but it also has some potential downsides, such as introducing unexpected behavior or making your code less maintainable.
+<pre>
+class Person:
+    def __init__(self, value):
+        self.value = value
+
+# creating a class method outside of the class
+def new_method(self):
+    print(f'Valis is {self.value}')
+
+
+# # Monkey patch the method into the class
+Person.new_method = new_method
+
+per1 = Person(44)
+per1.new_method()
+</pre>
+
 # Programs Practice
 1. Get the 2nd larget value in a list
 2. The given list ["abc", "def"] convert the list in [["a", "b", "c"], ["d", "e", "f"]].
