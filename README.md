@@ -978,11 +978,121 @@ r'^9\d{9}$'
 To be continue
 </pre>
 
+# Pickling and Unpicling
+1. Serializer is converting python complex datatype into json.
+2. Pickling is converting python complex datatype into binary format.
+<pre>
+import pickle
 
+# Serialize (pickling)
+data = [1, 2, 3, 4, 5]
+with open('data.pkl', 'wb') as file:
+    pickle.dump(data, file)
 
+# Deserialize (unpickling)
+with open('data.pkl', 'rb') as file:
+    loaded_data = pickle.load(file)
 
+print(loaded_data)  # Output: [1, 2, 3, 4, 5]
+</pre>
 
+# Json dump and load
+1. json.dump - serializer, converting python complex data type into json format.
+2. json.load - deserializer, converting json data back to python complex data type.
+<pre>
+import json
 
+data = {"name": "Fareen", "age": 25}
+
+with open("data.json", 'w') as file:
+    json.dump(data, file)
+
+with open("data.json", 'r') as file:
+    json_data = json.load(file)
+
+print(json_data)
+</pre>
+
+# MultiTasking & MultiThreading
+1. Multitasking involves running multiple processes, which are separate and isolated instances of a program, while multithreading involves running multiple threads within a single process, which share the same memory space. Multitasking provides strong isolation but has higher overhead, while multithreading has lower overhead but requires careful management of shared resources and synchronization.
+
+![1](https://github.com/fareen341/Python-Programming/assets/59610617/20e1cdc5-6318-495c-b9fb-8a122c95b1f1)
+
+2. MultiTasking Example: below program will run parallely utiling the different core of the CPU.
+<pre>
+import multiprocessing
+
+def worker1():
+    for i in range(5):
+        print("Worker 1: Task", i)
+
+def worker2():
+    for i in range(5):
+        print("Worker 2: Task", i)
+
+# Create two separate processes for multitasking
+process1 = multiprocessing.Process(target=worker1)
+process2 = multiprocessing.Process(target=worker2)
+
+# Start the processes
+process1.start()
+process2.start()
+
+# Wait for the processes to finish
+process1.join()
+process2.join()
+
+print("Multitasking complete")
+
+Output:
+Worker 1: Task 0
+Worker 2: Task 0
+Worker 1: Task 1
+Worker 2: Task 1
+Worker 1: Task 2
+Worker 2: Task 2
+Worker 1: Task 3
+Worker 2: Task 3
+Worker 1: Task 4
+Worker 2: Task 4
+Multitasking complete
+</pre>
+
+3. Multi-Threading Example:
+<pre>
+import threading
+import time
+
+def worker1():
+    for i in range(5):
+        print("Worker 1: Task", i)
+        time.sleep(0.1)
+
+def worker2():
+    for i in range(5):
+        print("Worker 2: Task", i)
+        time.sleep(0.1)
+
+# Create two separate threads for multithreading
+thread1 = threading.Thread(target=worker1)
+thread2 = threading.Thread(target=worker2)
+
+# Start the threads
+thread1.start()
+thread2.start()
+
+# Wait for the threads to finish
+thread1.join()
+thread2.join()
+
+print("Multithreading complete")
+
+O/p: same as above
+
+In this example, we define two worker functions, worker1 and worker2, which perform tasks. 
+We create two separate threads using threading.Thread and assign each worker function to a thread. 
+We start the threads, and they run concurrently. The join method is used to wait for both threads to complete.
+</pre>
 
 # Programs Practice
 1. Get the 2nd larget value in a list
@@ -1042,6 +1152,7 @@ else:
 3. What is `__init__()` in python?
 4. Difference betweeb `__init__()` method and `__init__.py` file?
 5. What is self in class?
+6. What is MetaProgramming?
 
 
 # Interview Questions with answer:
@@ -1071,8 +1182,8 @@ containing it should be considered a Python package or module.
 5. What is self in class?
 In Python, self is a convention, and not a reserved keyword, used to represent the instance of a class within the class itself. It is the first parameter of instance methods in Python. When you define a method within a class, the method should accept self as its first parameter.
 
-6. 
-
+6. What is MetaProgramming?
+Metaprogramming, as mentioned earlier, involves writing code that generates, modifies, or analyzes other code at runtime. Example decorator.
 
 
 # Programming Answers
