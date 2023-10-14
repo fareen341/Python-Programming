@@ -493,12 +493,28 @@ for index, fruit in enumerate(fruits):
     print(f"Index {index}: {fruit}")
 </pre>
 
-6. eval(): Essentially, it allows you to run Python code from a string.
+6. eval() & exec()</br>
+eval(): Essentially, it allows you to run Python code from a string.</br>
+exec(): It is used for block of string.
 <pre>
+# eval()
 nums_list = "[1,2,3,4]"
 print(type(nums_list))			# <class 'str'>
 result = eval(nums_list)
 print(type(result))			# <class 'list'>
+
+# exec()
+code = """
+x = 10
+y = 20
+result = x + y
+print(result)
+"""
+exec(code)			# 30
+
+
+Difference in eval and exec is:
+eval for oe line stmt, exec is for multiple line of statement. Both uses string eval use one line str and exce uses multi-line string.
 </pre>
 
 7. range() and xrange() function
