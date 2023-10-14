@@ -1563,6 +1563,24 @@ ii. count the sum of all elements in the given list only if they are even number
 iii. with using list comphrension, if possible.
 </pre>
 28. Find the pallindrom using recursion?
+<pre>
+SOLUTION:
+def find_palindrom(num, reverse=0):
+    if num <= 0:
+        return reverse
+    reverse = reverse * 10 + num % 10
+    return find_palindrom(num // 10, reverse)
+
+res = find_palindrom(num)
+print("res %s" % res)
+
+<b>Points to remember when solving the recursion program.</b>
+1. Always give stop condition.
+2. If we need to initialize the variable for counter always use it in parameter which initialize with 0, see above.
+3. Understand the recursion loop first.
+4. Return statement should return itself. Base condition should return the value. 
+</pre>
+
 29. Give example of Decorator program?
 30. Give example of Higher order function?
 31. Find armstrong number.
