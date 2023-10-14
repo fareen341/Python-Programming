@@ -1022,7 +1022,7 @@ with open('data.pkl', 'rb') as file:
 print(loaded_data)  # Output: [1, 2, 3, 4, 5]
 </pre>
 
-# Json dump and load
+# Json dump, dumps and load, loads. 
 1. json.dump - serializer, converting python complex data type into json format.
 2. json.load - deserializer, converting json data back to python complex data type.
 <pre>
@@ -1030,13 +1030,33 @@ import json
 
 data = {"name": "Fareen", "age": 25}
 
-with open("data.json", 'w') as file:
-    json.dump(data, file)
+# writing
+file = open("data.json", 'w')
+json.dump(data, file)
+file.close()
 
-with open("data.json", 'r') as file:
-    json_data = json.load(file)
-
+# reading
+file = open("data.json", 'r')
+json_data = json.load(file)
 print(json_data)
+file.close()
+
+<b>Difference between load and loads</b>
+1. In loads or dumps, `s` stands for string, if i have a string data in python and i want to convert it into json use loads.
+2. Use load and dump when working with files.
+
+# this is json data, which takes string, in python it'll print as str
+json_data = '{"US": 100, "IND": 200}'
+print(type(json_data))                                  # str, basically json
+
+# loads
+converted_python_dt = json.loads(json_data)             # {"US": 100, "IND": 200}'
+print(type(converted_python_dt))                        # dict
+
+# dumps
+python_dt = converted_python_dt                         # python dict
+converted_json_dt = json.dumps(python_dt)               # str
+print(type(converted_json_dt))                          # {"US": 100, "IND": 200}
 </pre>
 
 # MultiTasking & MultiThreading
@@ -1118,6 +1138,294 @@ O/p: same as above
 In this example, we define two worker functions, worker1 and worker2, which perform tasks. 
 We create two separate threads using threading.Thread and assign each worker function to a thread. 
 We start the threads, and they run concurrently. The join method is used to wait for both threads to complete.
+</pre>
+
+# Method Chaining
+Method chaining is a programming technique where you can call multiple methods on an object one after the other in a single line of code. This is often used for building more concise and readable code.
+<pre>
+class Calculator:
+    def __init__(self, value=0):
+        self.value = value
+
+    def add(self, x):
+        self.value += x
+        return self
+
+    def subtract(self, x):
+        self.value -= x
+        return self
+
+    def get_result(self):
+        return self.value
+
+# Using method chaining
+result = Calculator(10).add(5).subtract(2).get_result()
+
+print("Result:", result)			# Result: 13
+</pre>
+
+# Function Factory
+1. Function Factory is the function which return another function as its output. It is higher order function.
+2. For example, check above higher order function.
+
+# Working with OS module.
+<pre>
+<b>Get current working dir.</b>
+os.getcwd()		
+	
+<b>mkdir() vs makedirs()</b>
+# will give error if Python dir is not present in current dir	
+os.mkdir('Python/Django')	
+	
+# will not give error if Python dir is not present in current dir and create dir accordingly
+# will create Python first and inside it DJango	
+os.mkdir('Python/Django')			
+
+<b>rmdir() vs removedirs()</b>
+Same like make directory.
+
+<b>List directory</b>
+# we need to give full path here
+print(os.listdir('/home/fareen/Desktop/Python'))
+	
+# whatever it prints we need to give that path inside listdir
+print(os.getcwd())
+
+<b>Check for file existance. isfile() & exists()</b>
+print(os.path.isfile("output.csv"))				# True
+print(os.path.exists("output.csv"))				# True
+
+print(os.path.isfile("/home/fareen/Desktop/Python/output.csv"))		# True
+print(os.path.exists("/home/fareen/Desktop/Python/output.csv"))		# True
+</pre>
+
+# Working with file.
+<pre>
+import json
+
+# Writing data
+d = {"UN": 30, "INT": 40}
+
+file = open("data.json", "w")		# we can also use with keyword
+json.dump(d, file)
+file.close()
+
+# Reading Data
+file = open("data.json", "r")	
+read = json.load(file)
+print(read)
+file.close()
+</pre>
+
+# Advance Python
+# Pandas
+In pandas we have series and dataframe, input/output, data cleaning like missing and null value, merging and joinig and plot.
+<b>1. DataFrame</b>
+<pre>
+
+import pandas as pd
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie'],
+    'Age': [25, 30, 35],
+    'City': ['New York', 'San Francisco', 'Los Angeles']
+}
+
+df = pd.DataFrame(data)
+
+O/p:
+      Name  Age           City
+0    Alice   25       New York
+1      Bob   30  San Francisco
+2  Charlie   35    Los Angeles
+</pre>
+
+<b>2. Series</b>
+<pre>
+import pandas as pd
+# Creating a Series with custom index labels
+data = {'Alice': 25, 'Bob': 30, 'Charlie': 35}
+my_series = pd.Series(data)
+
+# Print the Series
+print(my_series)
+
+O/p:
+Alice      25
+Bob        30
+Charlie    35
+dtype: int64
+</pre>
+
+<b> Input/Output in pandas</b>
+<pre>
+Reading:
+1. read_csv:
+eg: df = pd.read_csv('data.csv')
+
+2. read_excel
+3. read_json
+4. read_sql
+
+Writing:
+same functions like above but instead of read it is to_csv, to_sql etc
+
+Example: to_csv
+import pandas as pd
+df = {
+        'alpha' : ['a', 'b', 'c', 'd'],
+        'data' : [10, 20, 30, 40]
+     }
+my_series = pd.DataFrame(df)
+my_series.to_csv('output.csv', index=False)
+</pre>
+
+<b>loc & iloc in pandas</b>
+<pre>
+Indexing:
+<b>loc example:</b>
+
+import pandas as pd
+
+data = {'A': [1, 2, 3, 4, 5],
+        'B': [10, 20, 30, 40, 50],
+        'C': ['apple', 'banana', 'cherry', 'date', 'elderberry']}
+
+df = pd.DataFrame(data, index=['row1', 'row2', 'row3', 'row4', 'row5'])
+
+O/p:
+        A   B          C
+row1  1  10      apple
+row2  2  20    banana
+row3  3  30    cherry
+row4  4  40    date
+row5  5  50    elderberry
+
+selected_data = df.loc[[row], [column]]
+selected_data = df.loc[['row1', 'row3'], ['A', 'C']]
+
+O/p:
+      A   B      C
+row1  1  10  apple
+
+selected_column = df.loc[:, 'B']
+
+<b>iloc: select by integer position.</b>
+Example:
+selected_column = df.iloc[:, 1]
+
+O/p:
+row1    10
+row2    20
+row3    30
+row4    40
+row5    50
+Name: B, dtype: int64
+</pre>
+
+<b>Data Visualization</b>
+<pre>
+Built-in plotting methods like plot(), hist(), boxplot(), etc.
+For this to work we need matplotlab module.
+
+Step 1: Create or load data.
+Step 2: Convert into dataframe/series.
+Step 3: Plot, using df.plot(kind)
+
+Example:
+bar plot:
+import pandas as pd
+import matplotlib.pyplot as plt
+data = {'Category': ['A', 'B', 'C'], 'Value': [10, 20, 15]}
+df = pd.DataFrame(data)
+df.plot(x='Category', y='Value', kind='bar')
+OR
+plt.show()
+
+histogram:
+import pandas as pd
+import matplotlib.pyplot as plt
+series = pd.Series([1, 2, 2, 3, 3, 3, 4, 4, 5])
+series.plot(kind='hist', bins=5)
+</pre>
+
+<b>Data Merging and Joining</b>
+<pre>
+1. We can perform sql like join of two dataframe:
+2. The how parameter specifies the type of join (inner, outer, left, right).
+3. You can also join multiple DataFrames by chaining .join().
+
+import pandas as pd
+left = pd.DataFrame({'key': ['K0', 'K1', 'K2'],
+                    'value_left': [1, 2, 3]})
+right = pd.DataFrame({'key': ['K1', 'K2', 'K3'],
+                     'value_right': [4, 5, 6]})
+result = pd.merge(left, right, on='key', how='left')  # Left join
+
+O/p:
+key	value_left	value_right
+0	K0	1	NaN
+1	K1	2	4.0
+2	K2	3	5.0
+
+
+Example 2: using .join()
+  
+import pandas as pd
+left = pd.DataFrame({'A': ['A0', 'A1', 'A2']},
+                    index=['K0', 'K1', 'K2'])
+right = pd.DataFrame({'B': ['B0', 'B1', 'B2']},
+                     index=['K1', 'K2', 'K3'])
+result = left.join(right, how='inner')
+
+O/p:
+	A	B
+K1	A1	B0
+K2	A2	B1
+</pre>
+
+# Numpy
+Numpy is all about numeric calculations, it works well with array, we get maths functions easily in numpy like sqrt, add, sin, power etc, generate range, generate random number.
+<pre>
+import numpy as np
+
+# Creating an array from a Python list
+my_list = [1, 2, 3, 4, 5]
+arr_from_list = np.array(my_list)
+
+# Creating an array filled with zeros
+zeros_array = np.zeros(5)
+
+# Creating a 2D array filled with ones
+ones_array = np.ones((2, 3))
+
+# Creating an array with a range of values
+range_array = np.arange(0, 10, 2)
+
+# Creating a linearly spaced array
+linspace_array = np.linspace(0, 1, 5)
+
+# Creating a random array with values between 0 and 1
+random_array = np.random.rand(3, 4)
+</pre>
+
+
+# Matplotlib & Seaborn
+Both are used for data visualization.
+<pre>
+We need to import Matplotlib for plotting
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+data = {
+    "Country": ["UN", "US", "IND", "EU", "CHINA"],
+    "SCore": [100, 20, 40, 50, 100]
+}
+
+df = pd.DataFrame(data)
+df.plot(kind='hist', bins=2)
+plt.show()
 </pre>
 
 # Programs Practice
