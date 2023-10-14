@@ -1565,6 +1565,8 @@ iii. with using list comphrension, if possible.
 28. Find the pallindrom using recursion?
 <pre>
 SOLUTION:
+
+num = 1234
 def find_palindrom(num, reverse=0):
     if num <= 0:
         return reverse
