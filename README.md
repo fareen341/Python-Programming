@@ -1428,6 +1428,12 @@ df.plot(kind='hist', bins=2)
 plt.show()
 </pre>
 
+# What is pep8 and flake8?
+1. PEP 8 is the Python Enhancement Proposal that defines the style guide for writing Python code. It provides guidelines and recommendations on how to format Python code for improved readability and consistency.
+2. Some key component of pep8 is, Maximum Line Length: Limit lines to 79 characters for code and 72 characters for docstrings and comments.
+3. flake8 is a tool that checks your Python code against PEP 8 style guide conventions and detects violations. It enforces PEP 8 rules and helps ensure that your code follows the recommended coding standards.
+4. We can use flake8 vs code extension.
+
 # Programs Practice
 1. Get the 2nd larget value in a list
 2. The given list ["abc", "def"] convert the list in [["a", "b", "c"], ["d", "e", "f"]].
