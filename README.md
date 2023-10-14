@@ -1560,6 +1560,7 @@ Then, the output should be:
 <pre>
 i. count the sum of all elements in the given list.
 ii. count the sum of all elements in the given list only if they are even number.
+iii. with using list comphrension, if possible.
 </pre>
 28. Find the pallindrom using recursion?
 29. Give example of Decorator program?
