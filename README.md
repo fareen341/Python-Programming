@@ -1564,7 +1564,7 @@ iii. with using list comphrension, if possible.
 </pre>
 28. Find the pallindrom using recursion?
 <pre>
-SOLUTION:
+<b>SOLUTION:</b>
 
 num = 1234
 def find_palindrom(num, reverse=0):
@@ -1589,6 +1589,18 @@ print("res %s" % res)
 <pre>
 i. with using list method.
 ii. without using list method, i.e with logic.
+</pre>
+32. Sum of all element in a given range, for eg if i give 5 then calculate `5 + 4 + 3 + 2 + 1` using recursion?
+<pre>
+<b>SOLUTION</b>
+def find_sum(num, total=0):
+    if num <= 0:            # base condition
+        return total
+    total = total + num
+    return find_sum(num - 1, total)
+
+res = find_sum(5)
+print(f"Result is : {res}")
 </pre>
 
 
