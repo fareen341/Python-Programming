@@ -1512,6 +1512,49 @@ Calculate each digit raised to the third power, it is pow of 3 not num ** 3:
 13. Find the count of word "python" in the given string, str = "python is great, it has many features, python".
 14. Find the common element in two str, name = "Seema" and name = "FarEen", by repetation of words and without repetation also. Also ignoring the case.
 15. Calculate sum of all numbers in a list using recursion nums = [1,2,3,4,5,6] also print sum as fibonacci series like 1+2 = 3 so on.
+16. In a given list l=[1,1,1,4,5,6,5,6], count the occurance of all elements, also count the occurance of just one element `4`?
+i. using collections module. </br>
+ii. using logic. </br>
+17. Write a program which can compute the factorial of a given numbers.
+18. Question: towns = [{'name': 'Manchester', 'population': 58241}, {'name': 'Coventry', 'population': 12435}, {'name': 'South Windsor', 'population': 25709}] 
+<pre>
+Create a new list of the town names using for loops... using list comprehensions... using the map() function.
+Create two lists, one of the town names and one of the town populations using for loops... using list comprehensions... using the zip() function.
+Given the two lists (names and populations), combine them back into a list of dictionaries using for loops... using list comprehensions.
+Using the list of towns, find the total combined population using for loops... using the sum() function... using the reduce() function.
+</pre>
+19. Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input and then check whether they are divisible by 5 or not. The numbers that are divisible by 5 are to be printed in a comma separated sequence.
+<pre>
+Example:
+0100,0011,1010,1001
+Then the output should be:
+1010
+</pre>
+20. Write a program, which will find all such numbers between 1000 and 3000 (both included) such that each digit of the number is an even number. The numbers obtained should be printed in a comma-separated sequence on a single line.
+21. Write a program that accepts a sentence and calculate the number of letters and digits.
+22. Suppose the following input is supplied to the program:
+<pre>
+hello world! 123
+Then, the output should be:
+LETTERS 10
+DIGITS 3
+</pre>
+23. Write a program that computes the value of a+aa+aaa+aaaa with a given digit as the value of a.
+<pre>
+Suppose the following input is supplied to the program:
+9
+Then, the output should be:
+11106
+</pre>
+23. Use a list comprehension to square each odd number in a list. The list is input by a sequence of comma-separated numbers.
+<pre>
+Suppose the following input is supplied to the program:
+1,2,3,4,5,6,7
+Then, the output should be:
+1,9,25,49
+</pre>
+24. How can you replace string space with a given character in Python?
+
 
 # Program with solution
 1. Shortest way to check for pallindrome.
@@ -1531,6 +1574,59 @@ else:
 4. Difference betweeb `__init__()` method and `__init__.py` file?
 5. What is self in class?
 6. What is MetaProgramming?
+7. What is self, cls & static in class method?
+8. What is static method, class method & instance method?
+9. Difference in exec() and eval ()?
+10. What is os and explain few operations on os?
+11. What is MultiProcessing & MultiThreading? Give example program?
+12. Different types of inheritance?
+13. What is regular expression, explain match(), search() & findall()?
+14. Create a pattern for IND mobile number extraction, email and url?
+15. Working with file, give example of read and write file?
+16. Difference in json load and dump? and how it is different from load vs loads & dump vs dumps?
+17. Difference in .py and .pyc?
+18. What is the difference between deep and shallow copying in Python?
+19. What is the difference between range and xrange? How has this changed over time?
+20. How do you iterate over a list and pull element indices at the same time?
+21. I'm getting a maximum recursion depth error for a function. What does this mean? How can I mitigate the problem?
+22. How does Python's list.sort work at a high level? Is it stable? What's the runtime?
+23. What does this list comprehension do? Give one example of dictionary?
+24. What is monkeypatching? How can you do it in Python?
+25. Difference in pickling and unpicling? How it id differ from Serializer and Deserializer?
+26. What is the use of enumerate() in Python?
+27. Differentiate between append() and extend() methods ?
+28. What is the different between range () and xrange () functions in Python?
+29. What is the difference between del() and remove() methods of list?
+30. What are the tools that help to find bugs or perform static analysis?
+31. How Python is interpreted?
+32. What is docstring in Python? How do you access/see the doc string?
+33. List vs Tuple?
+34. Set vs Frozenset?
+35. What is a Module in a python?
+36. What is Scope in function, explain global keyword?
+37. Decorators? Give example?
+38. Explain Python Logging?
+39. What are higher ordered functions.
+i. passing function as an argument.
+ii. returning function on return statement.
+40. Explain isinstance()
+41. Nested function, Explain Closure in Python?
+42. What is polymorphism?
+43. What is Overriding? Explain Constructor Overriding?
+44. Explain super() keyword?
+45. What is Duck Typing?
+46. What is Abstract Base Class. Explain concrete Methods in Abstract Base Classes?
+47. Difference between Abstraction & Encapsulation?
+
+
+PENDING TOPICS:
+1. What is yield?
+2. What is Generator and Iterator?
+3. What is property in class?
+4. What is GC and how does GC works?
+5. Is all the memory freed when Python exits?
+6. How memory is managed in Python?
+
 
 
 # Interview Questions with answer:
@@ -1563,6 +1659,41 @@ In Python, self is a convention, and not a reserved keyword, used to represent t
 6. What is MetaProgramming?
 Metaprogramming, as mentioned earlier, involves writing code that generates, modifies, or analyzes other code at runtime. Example decorator.
 
+7. What is self, cls & static in class method? 8. What is static method, class method & instance method?
+<pre>
+Static method: it is regular method having decorator to make it normal method.
+Class Method: Class Method can directly access class variables. It also have decorator
+Instance Method: Method of the class, which uses self.
+</pre>
+
+9. Difference in exec() and eval ()?
+10. What is os and explain few operations on os?
+
+11. What is MultiProcessing & MultiThreading?
+<pre>
+Difference in MultiProcessing & MultiThreading is MultiProcessing involves multiple processes and MultiThreading use different shards in one single process.
+Give example program: see above
+</pre>
+
+20. How do you iterate over a list and pull element index at the same time?
+<pre>
+We can use enumerate() funtion.
+</pre>
+
+22. How does Python's list.sort work at a high level? Is it stable? What's the runtime?
+<pre>
+list.sort uses TimSort, which is a hybrid sorting algorithm derived from merge sort and insertion sort.
+</pre>
+
+30. What are the tools that help to find bugs or perform static analysis?
+<pre>
+There are many one of them is flake8. I use flake8.
+</pre>
+
+31. How Python is interpreted?
+<pre>
+Python is an interpreted language, which means that the Python code is executed line by line by an interpreter.
+</pre>
 
 # Programming Answers
 15. Calculate sum of all numbers in a list using recursion nums = [1,2,3,4,5,6] also print sum as fibonacci series like 1+2 = 3 so on.
