@@ -1635,6 +1635,27 @@ def find_sum(num, total=0):
 res = find_sum(5)
 print(f"Result is : {res}")
 </pre>
+33. Print the following pattern:
+<pre>
+        * 
+      * * * 
+    * * * * * 
+  * * * * * * * 
+* * * * * * * * * 
+
+<b>SOLUTION</b>
+incr = 1
+for i in range(0, 5):
+    # print space
+    for j in range(1, (5 - i)):
+        print(' ', end=" ")
+    if i >= 1:
+        incr = i+i+1
+    # print star
+    for k in range(0, (incr)):
+        print("*", end=" ")
+    print()
+</pre>
 
 
 # Program with solution
