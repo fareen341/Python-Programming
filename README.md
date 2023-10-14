@@ -1526,6 +1526,17 @@ for i in num:
 print(total)
 </pre>
 7. Remove duplicate from a list num_list = [3,4,6,3,4,7].
+<pre>
+i. Using simple set.
+ii. Using simple logic.
+
+ii.
+for i in num_list:
+    if num_list.count(i) > 1:
+        num_list.remove(i)
+print(num_list)
+</pre>
+
 8. Length of last word str = "python is great, it has many features".
 9. In the given list arr = [5, 32, 45, 4, 12, 18, 25], do minus of first element with second.
 10. Find all the pairs which has sum = 17 in the given list arr = [5, 7, 4, 3, 9, 8, 19, 21].
