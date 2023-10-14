@@ -1503,6 +1503,27 @@ Calculate each digit raised to the third power, it is pow of 3 not num ** 3:
 3^3 = 27
 
 1 + 125 + 27 = 153
+
+i. Using recursion
+ii. Using simple logic
+
+<b>SOLUTION:</b>
+# Using recursion
+def find_armstrong(num, total=0):
+    if num <= 0:
+        return total
+    total = total + pow(num % 10, 3)
+    return find_armstrong(num // 10, total)
+
+res = find_armstrong(407)
+print("ARM: %s" % res)
+
+# uisng simple logic
+total = 0
+num = "158"
+for i in num:
+    total = total + pow(int(i), 3)
+print(total)
 </pre>
 7. Remove duplicate from a list num_list = [3,4,6,3,4,7].
 8. Length of last word str = "python is great, it has many features".
