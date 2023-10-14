@@ -1434,6 +1434,28 @@ plt.show()
 3. flake8 is a tool that checks your Python code against PEP 8 style guide conventions and detects violations. It enforces PEP 8 rules and helps ensure that your code follows the recommended coding standards.
 4. We can use flake8 vs code extension.
 
+# String formatting in python.
+<pre>
+<b>print statement syntax</b>
+print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+
+Example:
+a = "Hello"
+b =  "World"
+c = "AND Python"
+print(a, b, sep="*", end="**")
+print(c)
+
+Output:
+Hello*World**AND Python
+
+<b>f string in python</b>
+print(f'2 + 2 = {2 + 2}')		# 4
+	
+<b>Usinh modulus</b>
+print("2 + 2 = %s" % (2 + 2))		# 4
+</pre>
+
 # Programs Practice
 1. Get the 2nd larget value in a list
 2. The given list ["abc", "def"] convert the list in [["a", "b", "c"], ["d", "e", "f"]].
