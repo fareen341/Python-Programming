@@ -419,7 +419,8 @@ i.e calc_sum(n - 1) = calc_sum(4), so here n becomes 4, i.e n = 4, so n = n + ca
 </pre>
 
 8. Decorators in Function.
-In Python, decorators are a powerful and flexible way to modify or enhance the behavior of functions or methods without changing their source code.
+In Python, decorators are a powerful and flexible way to modify or enhance the behavior of functions or methods without changing their source code.</br>
+In Python, a decorator is a function that takes another function as an argument and adds some functionality to it without modifying its source code. Decorators are often used to modify the behavior of functions or methods.
 <pre>
 Example:
 def my_decorator(say_hello):
