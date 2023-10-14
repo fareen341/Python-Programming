@@ -1554,6 +1554,21 @@ Then, the output should be:
 1,9,25,49
 </pre>
 24. How can you replace string space with a given character in Python?
+25. Count the sum of all elemenet in list = [1,2,3,4] also sum of range of 5 numbers using recursion?
+26. Find febonacci series using recursion and without recursion?
+27. Give list l=[1,2,3,[9,9,9],10, [2,3], [3]] 
+<pre>
+i. count the sum of all elements in the given list.
+ii. count the sum of all elements in the given list only if they are even number.
+</pre>
+28. Find the pallindrom using recursion?
+29. Give example of Decorator program?
+30. Give example of Higher order function?
+31. Find armstrong number.
+<pre>
+i. with using list method.
+ii. without using list method, i.e with logic.
+</pre>
 
 
 # Program with solution
