@@ -1661,7 +1661,7 @@ for i in range(0, 5):
 
 34. Give the output of the following division.</br>
  i. 5 * 2 // 2 ** (2 + 3)</br>
- ii. 10 // 32
+ ii. 10 / 32
 <pre>
 
 <b>SOLUTION</b>
