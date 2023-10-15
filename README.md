@@ -1556,6 +1556,14 @@ print(num_list)
 14. Find the common element in two str, name = "Seema" and name = "FarEen", by repetation of words and without repetation also. Also ignoring the case.
 15. Calculate sum of all numbers in a list using recursion nums = [1,2,3,4,5,6] also print sum as fibonacci series like 1+2 = 3 so on.
 16. In a given list l=[1,1,1,4,5,6,5,6], count the occurance of all elements, also count the occurance of just one element `4`?
+<pre>
+<b>SOLUTION</b>
+l=[1,1,1,4,5,6,5,6]
+d = {}
+for i in l:
+    d.update({i, l.count(i)})
+print(d)
+</pre>
 i. using collections module. </br>
 ii. using logic. </br>
 17. Write a program which can compute the factorial of a given numbers.
