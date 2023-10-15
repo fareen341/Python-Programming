@@ -556,7 +556,7 @@ This is cuz it does the floor division, in case of minus floor acts as ceil and 
 </pre>
 
 
-# Getting Help In Python(help, dir & pydoc).
+# Getting Help In Python(help, dir & docstring).
 <pre>
 # Use of help
 For example if i want to get help for a module, i'll simply use:
@@ -569,9 +569,17 @@ The dir() function in Python is used to list all the attributes (including metho
 of an object. It can be applied to various types of objects, including modules, classes, instances, and more. 
 $ dir(functools)
 
-# Use of pydoc module.
-So it is a module, this command will not work on shell, get outside of shell and run:
-$ python3 -m pydoc list
+# doc string
+def sum_func(a, b):
+	'''
+	This is sum func.
+	'''
+	return a + b
+
+$ sum_func.__doc__				# for custom module
+
+import functools
+$ functools.reduce.__doc__			# will print the doc string of reduce
 </pre>
 
 # OOPs In Python.
