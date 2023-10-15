@@ -88,6 +88,8 @@ link followed: https://syntaxbytetutorials.com/sql-import-excel-file-to-table-wi
 <pre>
 .py files contain human-readable Python source code, while .pyc files contain compiled Python bytecode used for more efficient execution.
 And which is understadable by intepreter.
+
+IN short: .py file contains actual code, whereas .pyc is a complied file which intepreter understand.
 </pre>
 
 # Python Basics
