@@ -1659,6 +1659,43 @@ for i in range(0, 5):
     print()
 </pre>
 
+34. Give the output of the following division.</br>
+ i. 5 * 2 // 2 ** (2 + 3)</br>
+ ii. 10 // 32
+<pre>
+
+<b>SOLUTION</b>
+i. 
+
+5 * 2 // 2 ** (2 + 3)
+
+5 * 2 // 2 ** 5
+
+5 * 2 // 32
+
+10 // 32    =  0
+
+
+ii. 
+
+    0.3125
+32 | 10
+     32
+     ===
+     100
+     96
+     ===
+     40
+     32
+     ==
+     80
+     64
+     ==
+     160
+     160
+     ==
+</pre>
+
 
 # Program with solution
 1. Shortest way to check for pallindrome.
