@@ -1566,7 +1566,23 @@ print(d)
 </pre>
 i. using collections module. </br>
 ii. using logic. </br>
-17. Write a program which can compute the factorial of a given numbers.
+17. Write a program which can compute the factorial of a given numbers.</br>
+i. Using Recursion.</br>
+ii. Using Loop.
+<pre>
+<b>SOLUTION</b>
+
+
+<b>Using recursion</b>
+def calc_fact(num, factorial=1):
+    if num <= 1:
+        return factorial
+    factorial = factorial * num
+    return calc_fact(num - 1, factorial)
+
+res = calc_fact(5)
+print(res)
+</pre>
 18. Question: towns = [{'name': 'Manchester', 'population': 58241}, {'name': 'Coventry', 'population': 12435}, {'name': 'South Windsor', 'population': 25709}] 
 <pre>
 Create a new list of the town names using for loops... using list comprehensions... using the map() function.
