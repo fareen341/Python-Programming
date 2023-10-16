@@ -1711,9 +1711,13 @@ ii.
      160
      ==
 </pre>
-35. Calculate the largest element of a list using recursion, lst = [2,3,5,9,4,8,3,1,10, 3, 2, 38, 21, 3]?
+35. Calculate the largest element of a list using recursion, lst = [2,3,5,9,4,8,3,1,10, 3, 2, 38, 21, 3]?</br>
+i. Using recursion.</br>
+ii. Using loop.
 <pre>
 <b>SOLUTION</b>
+
+<b>Uisng recursion</b>
 lst = [2,3,5,9,4,8,3,1,10, 3, 2, 38, 21, 3]
 
 def calc_largest(lst, lar=lst[0]):
@@ -1725,6 +1729,15 @@ def calc_largest(lst, lar=lst[0]):
 
 res = calc_largest(lst)
 print(res)
+
+<b>Using Loop</b>
+fir = lst[0]
+for i in lst[1:]:
+    if i > fir:
+        lar = i
+        fir = i
+
+print(lar)
 </pre>
 
 
