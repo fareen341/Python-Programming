@@ -1484,7 +1484,7 @@ print("2 + 2 = %s" % (2 + 2))		# 4
 </pre>
 
 # Programs Practice
-1. Get the 2nd larget value in a list
+1. Get the 2nd larget value in a list.
 2. The given list ["abc", "def"] convert the list in [["a", "b", "c"], ["d", "e", "f"]].
 3. Reverse the name "fareen".
 4. Fine a pallindrome.
@@ -1710,6 +1710,21 @@ ii.
      160
      160
      ==
+</pre>
+35. Calculate the largest element of a list using recursion, lst = [2,3,5,9,4,8,3,1,10, 3, 2, 38, 21, 3]?
+<pre>
+<b>SOLUTION</b>
+lst = [2,3,5,9,4,8,3,1,10, 3, 2, 38, 21, 3]
+
+def calc_largest(lst, lar=lst[0]):
+    if not lst:
+        return lar
+    if lst[0] > lar:
+        lar = lst[0]
+    return calc_largest(lst[1:], lar)
+
+res = calc_largest(lst)
+print(res)
 </pre>
 
 
