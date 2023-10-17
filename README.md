@@ -443,6 +443,29 @@ O/p:
 Something is happening before the function is called.
 Hello!
 Something is happening after the function is called.
+
+<b>BEST EXAMPLE OF DECORATOR: use this in interview</b>
+class UnauthorizedUser(Exception):
+    def __init__(self, message="You are Unauthorized!"):
+        self.message = message
+        super().__init__(self.message)
+
+# super user check, if not super user then return exception
+def super_user_check(get_all_users):
+    def wrapper(request, *args, **kwargs):
+        if request == "Fareen":
+            return get_all_users(request, *args, **kwargs)
+        else:
+            raise UnauthorizedUser
+    return wrapper
+
+@super_user_check
+def get_all_users(request):
+    # uers = User.objects.all()
+    return f"Hello {request}, you are authorized!"
+	
+result = get_all_users("Fareen")
+print(result)
 </pre>
 
 9. What will be the output of the following function?
@@ -1826,6 +1849,27 @@ ii. returning function on return statement.
 45. What is Duck Typing?
 46. What is Abstract Base Class. Explain concrete Methods in Abstract Base Classes?
 47. Difference between Abstraction & Encapsulation?
+48. How to raise a custom exception?
+<pre>
+class UnauthorizedUser(Exception):
+    def __init__(self, message="You are Unauthorized!"):
+        self.message = message
+        super().__init__(self.message)
+
+<b>Raise an error:</b>b>
+
+name = "Fareen"
+if name != "FareenAns":
+        raise UnauthorizedUser
+
+<b>Handling above exception</b>
+name = "Fareen"
+try:
+    if name != "FareenAns":
+        raise UnauthorizedUser
+except UnauthorizedUser as e:
+    print("ERROR %s" % e)
+</pre>
 
 
 PENDING TOPICS:
