@@ -1789,6 +1789,14 @@ print(lar)
 
 36. Write a program to convert the below data into key value pair  of json, data is like:
 <pre>
+pdf_data = [
+    "12-04-2012 JHKWm KUHYk PCS 20000.456 8,4432.09 3,545.55 CR",
+    "12-04-2012 KUHKDNFKNFKLIOOUJI 80700.456 8,4432.09 2,545.55 CR",
+    "12-04-2012 KHHDJHDDKJHD KDUH/KLDIUYH PCS 50000.456 1,4432.09 4,545.55 CR",
+    "12-04-2012 KIUGHDIK KJUDGHJKAH 90000.456 8,4432.09 4,545.55 CR"
+]
+
+output should be: list of dict of all elements of above list
 {
     data: 12-04-2012,
     acno: JHKWm KUHYk PCS,
@@ -1796,9 +1804,9 @@ print(lar)
     debit: 8,4432.09,
     total: 3,545.55 CR    
 }
-in above string the data in all list elements are same except the acno, 2nd string
 </pre>
 <pre>
+In above string the data in all list elements are same except the acno, 2nd string
 <b>SOLUTION</b>
 account_list = []
 for i in pdf_data:
