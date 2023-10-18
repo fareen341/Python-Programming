@@ -1787,6 +1787,35 @@ for i in lst[1:]:
 print(lar)
 </pre>
 
+36. Write a program to convert the below data into key value pair  of json, data is like:
+<pre>
+{
+    data: 12-04-2012,
+    acno: JHKWm KUHYk PCS,
+    credit: 20000.456,
+    debit: 8,4432.09,
+    total: 3,545.55 CR    
+}
+in above string the data in all list elements are same except the acno, 2nd string
+</pre>
+<pre>
+<b>SOLUTION</b>
+account_list = []
+for i in pdf_data:
+    final_acno = ""
+    d = {}
+    data = i.split(" ")
+    acno = data[1:-4]
+    for i in acno:
+        final_acno = final_acno + " " + i
+    d.update({"date": data[0], "acno": final_acno, "credit": data[-4], "debit": data[-3], "total": data[-2] + " " + data[-1]})
+    account_list.append(d)
+
+file = open("account.csv", "w")
+json.dump(account_list, file)
+file.close()
+</pre>
+
 
 # Program with solution
 1. Shortest way to check for pallindrome.
