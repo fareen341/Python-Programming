@@ -1636,7 +1636,24 @@ hello world! 123
 Then, the output should be:
 LETTERS 10
 DIGITS 3
+
+<b>SOLUTION:</b>
+
+text = "hello world! 123"
+str_count = 0
+int_count = 0
+for i in text:
+    try:
+        if int(i):
+            int_count = int_count + 1
+    except ValueError as e:
+        if not i == " " and isinstance(i, str):
+            str_count = str_count + 1
+
+print(str_count)
+print(int_count)
 </pre>
+
 23. Write a program that computes the value of a+aa+aaa+aaaa with a given digit as the value of a.
 <pre>
 Suppose the following input is supplied to the program:
