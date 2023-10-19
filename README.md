@@ -1972,7 +1972,31 @@ num = 50
 res = prime_calc(num)
 result = [i for i in range(1, num) if i not in res]
 print(result)
+
+<b> Also we can do:</b>
+res = set(lst) - set(non_prime)
+print("res", res)
 </pre>
+
+39. Calculate prime number in the given list.
+<pre>
+non_prime = []
+lst = [3, 4, 6, 5, 87, 3, 34, 346, 227]
+for i in lst:
+    for j in range(2, 10):
+        if i == j:
+            continue
+        if i % j == 0:
+            # print(i)
+            non_prime.append(i)
+            break
+
+res = set(lst) - set(non_prime)
+print("res", res)
+
+# if we need repeating numbers also, we need to use loop, see above
+</pre>
+
 
 # Program with solution
 1. Shortest way to check for pallindrome.
