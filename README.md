@@ -1929,6 +1929,51 @@ result = calculate_nested_list_sum(original_list)
 print("Sum of elements in the nested list:", result)
 </pre>
 
+39. Calculate prime number in 50 range.
+<pre>
+i. Using loop
+ii.Using recursion
+
+So prime number is number which is divisible by 1 and itself, like:
+2, 3, 4, .. 19 and so on, is prime number cuz it is divisible by itself and no other number.
+</pre>
+
+<pre>
+<b>SOLUTION</b>
+
+i. Using loop
+lst = []
+num = 50
+for i in range(2, num):
+    for j in range(2, 10):
+        if i == j:
+            continue
+        if i % j == 0:
+            lst.append(i)
+            break
+
+res = [i for i in range(1, num) if i not in lst]
+print(res)
+
+
+ii. Using recursion
+def prime_calc(num, lst=[]):
+    if num < 3:
+        return lst
+    for i in range(2,10):
+        if num == i:
+            continue
+        if num % i == 0:
+            lst.append(num)
+            break
+    return prime_calc(num - 1)
+
+num = 50
+res = prime_calc(num)
+result = [i for i in range(1, num) if i not in res]
+print(result)
+</pre>
+
 # Program with solution
 1. Shortest way to check for pallindrome.
 <pre>
