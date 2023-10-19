@@ -271,19 +271,31 @@ Deep copy creates the entirely new object which is independent of original objec
 <pre>
 import copy
 
-# shallow copy
-original_list = [1,2,3]
-shallow_copied_list = copy.copy(original_list)
-shallow_copied_list[1] = 88
-print(shallow_copied_list)
-print(original_list)
+# Original nested list
+original_list = [1, [2, [3, 4], [5, 6], 7]]
 
-# deep copy
-original_list = [1,2,3]
-deep_copied_list = copy.deepcopy(original_list)
-deep_copied_list[1] = 88
-print(original_list)
-print(deep_copied_list)
+# Shallow copy
+shallow_copied = copy.copy(original_list)
+
+# Deep copy
+deep_copied = copy.deepcopy(original_list)
+
+# Modify the copied lists
+shallow_copied[1][0] = 'X'
+deep_copied[1][0] = 'Y'
+
+# Print the results
+print("Original List:", original_list)
+print("Shallow Copy:", shallow_copied)
+print("Deep Copy:", deep_copied)
+
+output:
+Original List: [1, ['X', [3, 4], [5, 6], 7]]
+Shallow Copy: [1, ['X', [3, 4], [5, 6], 7]]
+Deep Copy: [1, ['Y', [3, 4], [5, 6], 7]]
+
+
+<b>Deep copy did not touch the original list, where as shallow copy change both the list</b>
 </pre>
 
 # Conditional Execution
