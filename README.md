@@ -1577,7 +1577,7 @@ print(num_list)
 12. Convert two list into dict x = [1,2,3,4], y = ["a", "b", "c", "d"].
 13. Find the count of word "python" in the given string, str = "python is great, it has many features, python".
 14. Find the common element in two str, name = "Seema" and name = "FarEen", by repetation of words and without repetation also. Also ignoring the case.
-15. Calculate sum of all numbers in a list using recursion nums = [1,2,3,4,5,6] also print sum as fibonacci series like 1+2 = 3 so on.
+15. Calculate sum of all numbers in a list using recursion nums = [1,2,3,4,5,6].
 16. In a given list l=[1,1,1,4,5,6,5,6], count the occurance of all elements, also count the occurance of just one element `4`?</br>
 i. using collections module. </br>
 ii. using logic. </br>
@@ -1824,6 +1824,65 @@ json.dump(account_list, file)
 file.close()
 </pre>
 
+37. calculate fibonacci series of given number.
+<pre>
+i. Uisng simple loop.
+ii. Uinsg recursion.
+</pre>
+
+<pre>
+Understanding below series.
+# 0, 1, 1, 2, 3, 5, 8, 13
+
+# 0 + 1 = 1
+# 1 + 1 = 2
+# 1 + 2 = 3
+# 2 + 3 = 5
+# 3 + 5 = 8
+# 5 + 8 = 13
+
+In above:
+n0 = 0
+n1 = 1
+total = 0
+
+n0 + n1 = total
+n0 = n1
+n1 = total
+
+print(n1)	# will print the series
+</pre>
+
+<pre>
+<b>SOLUTION</b>
+i. Using for loop:
+
+n = 8
+n0 = 0
+n1 = 1
+total = 0
+lst = []
+for i in range(n):
+    total = n0 + n1
+    n0 = n1
+    n1 = total
+    lst.append(n1)
+print(lst)
+
+
+ii. Using recursion:
+def fino_series(num, n0=0, n1=1, total=0, lst =[]):
+    if num < 0:
+        return lst
+    total = n0 + n1
+    n0 = n1
+    n1 = total
+    lst.append(n1)
+    return fino_series(num - 1, n0, n1, total)
+
+res = fino_series(7)
+print(res)
+</pre>
 
 # Program with solution
 1. Shortest way to check for pallindrome.
@@ -1985,22 +2044,3 @@ There are many one of them is flake8. I use flake8.
 Python is an interpreted language, which means that the Python code is executed line by line by an interpreter.
 </pre>
 
-# Programming Answers
-15. Calculate sum of all numbers in a list using recursion nums = [1,2,3,4,5,6] also print sum as fibonacci series like 1+2 = 3 so on.
-<pre>
-def recursive_sum(n):
-    if not n:  # Base case: the list is empty
-        return 0
-    else:
-        rec = recursive_sum(n[1:])
-        sum = n[0] + rec
-        print(f'{n[0]} + {rec} = {sum}')
-        return sum
-
-n = [1, 2, 7, 1, 9]
-x = n.reverse()
-result = recursive_sum(n)
-print(result)
-
-Note: taking rec in a variable cuz, if we take recursive_sum(n[1:]) it'll call the self function again
-</pre>
