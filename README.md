@@ -1984,14 +1984,63 @@ except UnauthorizedUser as e:
     print("ERROR %s" % e)
 </pre>
 
+49. What is yield?
+<pre>
+yield is a keyword in Python used in the context of creating generators. It's used within a function to indicate that the function 
+should return a generator, which can be iterated over to produce a sequence of values one at a time. When yield is encountered, 
+the current state of the function is saved, and a value is sent to the caller. The function can later be resumed from where it left off, 
+continuing its execution.
+</pre>
+
+50. What is Generator?
+<pre>
+Example 1: generator
+
+def my_generator():
+    for i in range(100):
+        yield i
+gen = my_generator()
+
+for item in gen:
+    print(item)
+
+ In this example, my_generator is a generator function that yields values one at a time. When you loop over the gen object,
+ it processes one value at a time, just as you mentioned, which is more memory-efficient for large datasets.
+
+
+Example 2:  normal function
+
+def my_func():
+    for i in range(100):
+        return i
+
+for loop that iterates over the range from 0 to 99. In this case, the entire range is generated in memory.
+It doesn't load the entire range into memory at once, but it generates the values one at a time as needed by the loop.
+</pre>
+
+51. Iterator vs Iterable?
+<pre>
+Iterable: python list, tuple, dict are iterable, which is able to iterate.
+Iterator: 
+1. An "iterator" is an object used to iterate through an iterable.
+2. It keeps track of the current state and knows how to access the next value.
+3. An iterator is obtained from an iterable using the iter() function.
+4. When no item left, it'll give StopIteration
+5. Example:
+lst = [1,2,3]
+it = iter(lst)
+
+print(next(it))
+print(next(it))
+print(next(it))         # 3, It keeps track of the current state and knows how to access the next value.
+print(next(it))         # StopIteration
+</pre>
 
 PENDING TOPICS:
-1. What is yield?
-2. What is Generator and Iterator?
-3. What is property in class?
-4. What is GC and how does GC works?
-5. Is all the memory freed when Python exits?
-6. How memory is managed in Python?
+1. What is property in class?
+2. What is GC and how does GC works?
+3. Is all the memory freed when Python exits?
+4. How memory is managed in Python?
 
 
 
