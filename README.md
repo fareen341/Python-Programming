@@ -1874,11 +1874,11 @@ print(n1)	# will print the series
 <b>SOLUTION</b>
 i. Using for loop:
 
-n = 8
+n = 10
 n0 = 0
 n1 = 1
 total = 0
-lst = []
+lst = [n0, n1]
 for i in range(n):
     total = n0 + n1
     n0 = n1
@@ -1888,7 +1888,7 @@ print(lst)
 
 
 ii. Using recursion:
-def fino_series(num, n0=0, n1=1, total=0, lst =[]):
+def fino_series(num, n0=0, n1=1, total=0, lst =[0, 1]):
     if num < 0:
         return lst
     total = n0 + n1
@@ -1897,7 +1897,7 @@ def fino_series(num, n0=0, n1=1, total=0, lst =[]):
     lst.append(n1)
     return fino_series(num - 1, n0, n1, total)
 
-res = fino_series(7)
+res = fino_series(10)
 print(res)
 </pre>
 
