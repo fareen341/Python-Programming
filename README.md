@@ -2207,3 +2207,30 @@ There are many one of them is flake8. I use flake8.
 Python is an interpreted language, which means that the Python code is executed line by line by an interpreter.
 </pre>
 
+
+
+================================================================================================================
+# Extra Programming Excercise
+This excercise is for practice, above excercise is enough for interview. This is extra.</br></br>
+
+1. Write a Python program to find a list of integers with exactly two occurrences of nineteen and at least three occurrences of five. Return True otherwise False.
+<pre>
+Input:
+[19, 19, 15, 5, 3, 5, 5, 2]
+Output:
+True
+</pre>
+
+<pre>
+<b>SOLUTION</b>
+import collections
+
+lst = [19, 19, 15, 5, 3, 5, 5, 2, 5]
+res = collections.Counter(lst)
+if res[19] == 2 and res[5] == 3:
+    print(True)
+else:
+    print(False)
+</pre>
+
+
