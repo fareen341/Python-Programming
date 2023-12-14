@@ -813,6 +813,10 @@ string_length = get_length("Hello, World!")  # Works
 list_length = get_length([1, 2, 3])           # Works
 tuple_length = get_length((4, 5, 6))          # Works
 
+a = "937937"
+print(type(a))			# str
+print(int(a))			# even tho type is string it checks the behaviour
+
 # There are no type checks; it works based on behavior.
 </pre>
 
