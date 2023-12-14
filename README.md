@@ -580,7 +580,7 @@ $ isinstance("fareen", (list, str))		# True
 # Extra points
 <pre>
 1. Floating point error:
-0.1 + 0.2			# 0.30000000000000004
+0.3 - 0.1			# 0.19999999999999998
 
 Getting wong error, we should get 0.3
 
