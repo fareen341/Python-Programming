@@ -2170,6 +2170,14 @@ print(next(it))         # 3, It keeps track of the current state and knows how t
 print(next(it))         # StopIteration
 </pre>
 
+52. What is context manager in python?
+- In Python, context managers are a way to properly manage resources by ensuring that certain actions are taken before and after a block of code runs. They are typically used to manage resources like file handling, database connections, locks, etc., ensuring that setup and cleanup operations are automatically handled.
+```python
+with open('example.txt', 'r') as file:
+    content = file.read()
+# No need to call file.close(), it is done automatically after
+```
+
 PENDING TOPICS:
 1. What is property in class?
 2. What is GC and how does GC works?
