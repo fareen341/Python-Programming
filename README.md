@@ -1499,6 +1499,26 @@ plt.show()
 2. Some key component of pep8 is, Maximum Line Length: Limit lines to 79 characters for code and 72 characters for docstrings and comments.
 3. flake8 is a tool that checks your Python code against PEP 8 style guide conventions and detects violations. It enforces PEP 8 rules and helps ensure that your code follows the recommended coding standards.
 4. We can use flake8 vs code extension.
+5. Difference between composition and inheritance?
+- Composition is when a class is composed of one or more objects from other classes and uses their functionality without altering their internal workings.
+- In inheritance we can alter the behaviour of parent class in child class.
+- This is same like in django we pass request to the method which does not have request, self.request = request. But this is not composition this is attribute assignment.
+```python
+class Engine:
+    def start(self):
+        return f'Engine started!'
+
+class Car:
+    def __init__(self):
+        self.engine = Engine()
+
+    def engine_status(self):
+        return self.engine.start()
+
+eng = Car()
+print(eng.engine_status())
+```   
+ 
 
 # String formatting in python.
 <pre>
