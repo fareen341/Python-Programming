@@ -2078,12 +2078,25 @@ ii. returning function on return statement.
 40. Explain isinstance()
 41. Nested function, Explain Closure in Python?
 42. What is polymorphism?
-43. What is Overriding? Explain Constructor Overriding?
-44. Explain super() keyword?
-45. What is Duck Typing?
-46. What is Abstract Base Class. Explain concrete Methods in Abstract Base Classes?
-47. Difference between Abstraction & Encapsulation?
-48. How to raise a custom exception?
+```python
+# Method Overloading (same method name, different parameter types or numbers)
+class MathOperations:
+    def add(self, a, b):
+        return a + b
+
+    def add(self, a, b, c):
+        return a + b + c
+
+math_op = MathOperations()
+print(math_op.add(1, 2))      # Calls the method with 2 arguments
+print(math_op.add(1, 2, 3))   # Calls the method with 3 arguments
+```
+44. What is Overriding? Explain Constructor Overriding?
+45. Explain super() keyword?
+46. What is Duck Typing?
+47. What is Abstract Base Class. Explain concrete Methods in Abstract Base Classes?
+48. Difference between Abstraction & Encapsulation?
+49. How to raise a custom exception?
 <pre>
 class UnauthorizedUser(Exception):
     def __init__(self, message="You are Unauthorized!"):
