@@ -826,6 +826,7 @@ print(int(a))			# even tho type is string it checks the behaviour
 1. This is same as which we have in django Abstract class.
 2. Here also this class acts as a structure only and dont allow us to cannot create object of this class. Likewise in django it does'nt create class for Abstract base class.
 3. We use Meta class in django to make it Abstract class. Likewise in python we use abstractmethod to make a method as abstractmethod.
+4. Uses: Abstract classes are used in object-oriented programming as a blueprint for other classes. They define a common interface and behavior for a group of related classes but cannot be instantiated on their own. 
 <pre>
 from abc import ABC, abstractclassmethod
 
