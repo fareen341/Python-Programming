@@ -2178,6 +2178,8 @@ with open('example.txt', 'r') as file:
 # No need to call file.close(), it is done automatically after
 ```
 53. Exception?
+- Why exception: So when exception is not handled it'll show error and exit, when handled it'll show handled msg and dont exit.
+- Eg: When reading file, try to open not existing file, will show error FileNotFoundError error and exit, when handled it'll show proper msg.
 ```python
 
 x = 10
