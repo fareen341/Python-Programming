@@ -1130,6 +1130,9 @@ print(type(converted_json_dt))                          # {"US": 100, "IND": 200
 
 # MultiTasking & MultiThreading
 1. Multitasking involves running multiple processes, which are separate and isolated instances of a program, while multithreading involves running multiple threads within a single process, which share the same memory space. Multitasking provides strong isolation but has higher overhead, while multithreading has lower overhead but requires careful management of shared resources and synchronization.
+2. In short:
+- Multiprocess or multitasking is like virtual machine
+- Multithreading is like docker container running inside virtual machine
 
 ![1](https://github.com/fareen341/Python-Programming/assets/59610617/20e1cdc5-6318-495c-b9fb-8a122c95b1f1)
 
