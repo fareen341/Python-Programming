@@ -719,6 +719,8 @@ print(stu_obj.name)
 print(stu_obj._aadhar)
 print(stu_obj._Student__pswd)
 stu_obj.display()
+
+Purpose: This is used to prevent subclassing issues or to ensure that the attribute is not accidentally overridden or accessed directly.
 </pre>
 
 5. Diamond Problem.
