@@ -2298,4 +2298,36 @@ else:
     print(False)
 </pre>
 
+# To check what all parameters a class method accept
+```python
+import inspect
+
+class Car:
+    def get_car_details(self, a, b):
+        return f'A: {a}, B:{b}'
+
+c = Car()
+res = inspect.signature(Car.get_car_details)
+for res in res.parameters.values():
+    print(res)
+
+'''
+self
+a
+b
+'''
+
+# Likewise for existing method like list
+import inspect
+
+res = inspect.signature(list.sort)
+for res in res.parameters.values():
+    print(res)
+
+'''
+self
+key=None
+reverse=False
+'''
+```
 
