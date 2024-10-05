@@ -2177,6 +2177,24 @@ with open('example.txt', 'r') as file:
     content = file.read()
 # No need to call file.close(), it is done automatically after
 ```
+53. Exception?
+```python
+
+x = 10
+y = 0
+try:
+    z = x/y
+except Exception as e:
+    print('Exception occured:', e)
+except ZeroDivisionError as e:        # this is invalid, code will never go in cuz it'll always run its parent exception above
+    print('Exception occured ZeroDivisionError:', e)
+except:
+    print('This is default exception, if no other exception matched then this will run.')
+else:
+    print('No exception run else.', z)      # if no exception come this will run.
+finally:
+    print('This will always run no matter exception come or not.')
+``` 
 
 PENDING TOPICS:
 1. What is property in class?
