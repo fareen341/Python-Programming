@@ -2113,30 +2113,36 @@ continuing its execution.
 </pre>
 
 50. What is Generator?
-<pre>
-Example 1: generator
-
-def my_generator():
-    for i in range(100):
-        yield i
-gen = my_generator()
-
-for item in gen:
-    print(item)
-
- In this example, my_generator is a generator function that yields values one at a time. When you loop over the gen object,
- it processes one value at a time, just as you mentioned, which is more memory-efficient for large datasets.
-
-
-Example 2:  normal function
-
+- Generators in Python are a special type of iterable that allow you to generate values on the fly without holding the entire sequence in memory. They are useful for efficient memory management and working with large datasets or infinite sequences.
+```python
+# Normal Func
 def my_func():
     for i in range(100):
         return i
 
+'''
 for loop that iterates over the range from 0 to 99. In this case, the entire range is generated in memory.
 It doesn't load the entire range into memory at once, but it generates the values one at a time as needed by the loop.
-</pre>
+'''
+
+# Generator Func
+def generator_function():
+    for i in range(5):
+        yield i
+
+gen = generator_function()
+print(next(gen))  # Prints 0
+print(next(gen))  # Prints 1
+print(next(gen))  # Prints 2
+
+for i in gen:		
+    print(i)
+
+'''
+In this example, my_generator is a generator function that yields values one at a time. When you loop over the gen object,
+it processes one value at a time, which is more memory-efficient for large datasets.
+'''
+```  
 
 51. Iterator vs Iterable?
 <pre>
