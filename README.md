@@ -2036,6 +2036,21 @@ print("res", res)
 # if we need repeating numbers also, we need to use loop, see above
 </pre>
 
+40. Merge two dict.
+```python
+last_year = {"IND": 10, "UK": 20}
+curr_year = {"IND": 40, "UK": 50}
+
+'''
+Final Output: {'IND': 50, 'UK': 70}
+'''
+
+# Program:
+last_year = {"IND": 10, "UK": 20}
+curr_year = {"IND": 40, "UK": 50}
+final_d = {key: last_year[key] + curr_year[key] for key in last_year}
+print(final_d)
+```
 
 # Program with solution
 1. Shortest way to check for pallindrome.
