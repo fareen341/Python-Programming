@@ -1600,7 +1600,18 @@ print(num_list)
 13. Find the count of word "python" in the given string, str = "python is great, it has many features, python".
 14. Find the common element in two str, name = "Seema" and name = "FarEen", by repetation of words and without repetation also. Also ignoring the case.
 15. Calculate sum of all numbers in a list using recursion nums = [1,2,3,4,5,6].
-16. In a given list l=[1,1,1,4,5,6,5,6], count the occurance of all elements, also count the occurance of just one element `4`?</br>
+```python
+l = [1,2,3,4,5,6]
+def calc_sum(l, sum=0):
+    if len(l) == 0:
+        return sum
+    sum = sum + l[0]
+    return calc_sum(l[1:], sum)
+
+res = calc_sum(l)
+print(res)
+``` 
+17. In a given list l=[1,1,1,4,5,6,5,6], count the occurance of all elements, also count the occurance of just one element `4`?</br>
 i. using collections module. </br>
 ii. using logic. </br>
 <pre>
