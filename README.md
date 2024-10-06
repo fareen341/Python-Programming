@@ -1599,8 +1599,11 @@ print(num_list)
 12. Convert two list into dict x = [1,2,3,4], y = ["a", "b", "c", "d"].
 13. Find the count of word "python" in the given string, str = "python is great, it has many features, python".
 14. Find the common element in two str, name = "Seema" and name = "FarEen", by repetation of words and without repetation also. Also ignoring the case.
-15. Calculate sum of all numbers in a list using recursion nums = [1,2,3,4,5,6].
+15. Calculate sum:
+- Calculate sum of all numbers in a list using recursion nums = [1,2,3,4,5,6].
+- On nested list = l = [1, 4, 6, [3, 5, 1], 7, [9, 3]]
 ```python
+# Normal List
 l = [1,2,3,4,5,6]
 def calc_sum(l, sum=0):
     if len(l) == 0:
@@ -1610,7 +1613,22 @@ def calc_sum(l, sum=0):
 
 res = calc_sum(l)
 print(res)
-``` 
+
+# Nested list
+l = [1, 4, 6, [3, 5, 1], 7, [9, 3]]
+def calc_sum(l, total=0):
+    if len(l) == 0:
+        return total
+    if isinstance(l[0], list):
+        total = total + sum(l[0])
+    else:
+        total = total + l[0]
+    return calc_sum(l[1:], total)
+
+
+res = calc_sum(l)
+print(res)
+```
 17. In a given list l=[1,1,1,4,5,6,5,6], count the occurance of all elements, also count the occurance of just one element `4`?</br>
 i. using collections module. </br>
 ii. using logic. </br>
