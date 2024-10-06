@@ -2220,9 +2220,9 @@ A method has double underscore before and after, these are special methods in py
 Example, __str__(), __init__(), __repr__() etc
 </pre>
 
-2. Difference in __str__() & __repr__()
-- __str__: gives more user friendly output, which is understand by user.
-- __repr__: give developer friendly output, which is usefull for dev, when debuggig
+2. Difference in ``` __str__() ``` & ```__repr__()```.
+- ```__str__```: gives more user friendly output, which is understand by user.
+- ```__repr__```: give developer friendly output, which is usefull for dev, when debuggig
 ```python
 class Toy:
     def __init__(self, name, color, wheels):
