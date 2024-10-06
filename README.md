@@ -2114,6 +2114,10 @@ continuing its execution.
 
 50. What is Generator?
 - Generators in Python are a special type of iterable that allow you to generate values on the fly without holding the entire sequence in memory. They are useful for efficient memory management and working with large datasets or infinite sequences.
+- When working with large datasets where storing all the data in memory is impractical.
+- When you need lazy evaluation and want to produce data only as needed.
+- When working with infinite sequences.
+- When processing large files or streams of data efficiently.
 ```python
 # Normal Func
 def my_func():
