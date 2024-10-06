@@ -2220,6 +2220,44 @@ A method has double underscore before and after, these are special methods in py
 Example, __str__(), __init__(), __repr__() etc
 </pre>
 
+2. Difference in __str__() & __repr__()
+- __str__: gives more user friendly output, which is understand by user.
+- __repr__: give developer friendly output, which is usefull for dev, when debuggig
+```python
+class Toy:
+    def __init__(self, name, color, wheels):
+        self.name = name
+        self.color = color
+        self.wheels = wheels
+
+    def __repr__(self):
+        # A detailed representation for developers
+        return f"Toy(name='{self.name}', color='{self.color}', wheels={self.wheels})"
+    
+    def __str__(self):
+        # A simple, user-friendly description
+        return f"{self.color} {self.name} with {self.wheels} wheels"
+
+# Creating an instance of Toy
+my_toy = Toy("LEGO Car", "Blue", 4)
+
+# Using repr
+print(repr(my_toy))  # Output: Toy(name='LEGO Car', color='Blue', wheels=4)
+
+# Using str
+print(str(my_toy))   # Output: Blue LEGO Car with 4 wheels
+
+# 1. When Printing an Object (User Output)
+my_toy = Toy("LEGO Car", "Blue", 4)
+print(my_toy)  # Output: Blue LEGO Car with 4 wheels
+
+# 2. When Debugging or in Interactive Mode (Developer Output)
+# Interactive Python shell or while debugging:
+my_toy = Toy("LEGO Car", "Blue", 4)
+repr(my_toy)  # Output: Toy(name='LEGO Car', color='Blue', wheels=4)
+```
+
+
 2. What is `__init__()` method?
 <pre>
 It is the first method which is called in python, it constructor in python. 
