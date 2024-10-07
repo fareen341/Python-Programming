@@ -2036,7 +2036,8 @@ print("res", res)
 # if we need repeating numbers also, we need to use loop, see above
 </pre>
 
-40. Merge two dict.
+40. Question on dict.
+- Merge two dict.
 ```python
 last_year = {"IND": 10, "UK": 20}
 curr_year = {"IND": 40, "UK": 50}
@@ -2051,6 +2052,55 @@ curr_year = {"IND": 40, "UK": 50}
 final_d = {key: last_year[key] + curr_year[key] for key in last_year}
 print(final_d)
 ```
+- Find the Key with the Maximum Value
+```python
+fruits_price = {"apple": 6, "banana": 2}
+final_dict = max(fruits_price, key=fruits_price.get)
+print(final_dict)
+```
+- Count Occurrences of Each Character.
+<pre>
+text = "hello world"
+# Output: {'h': 1, 'e': 1, 'l': 3, 'o': 2, 'w': 1, 'r': 1, 'd': 1}
+</pre>
+- Filter a dictionary by values greater than a specified number.
+<pre>
+scores = {"John": 80, "Emily": 75, "Lucas": 95}
+threshold = 80
+# Output: {'Lucas': 95}
+</pre>
+- Invert a dictionary so that the keys become values and the values
+<pre>
+data = {"a": 1, "b": 2, "c": 3}
+# Output: {1: 'a', 2: 'b', 3: 'c'}
+</pre>
+- Check if a Dictionary is Empty.
+```python
+Using bool.
+```
+- Sort a Dictionary by Values
+<pre>
+data = {"apple": 10, "banana": 25, "orange": 15}
+# Output (ascending): {'apple': 10, 'orange': 15, 'banana': 25}
+</pre>
+- Sum of All Values in a Dictionary
+<pre>
+expenses = {"rent": 1200, "groceries": 300, "utilities": 150}
+# Output: 1650
+</pre>
+- Find Common Keys between Two Dictionaries.
+<pre>
+dict1 = {"apple": 1, "banana": 2}
+dict2 = {"banana": 5, "cherry": 3}
+# Output: ['banana']
+</pre>
+- Remove a Key from Dictionary
+<pre>
+data = {"apple": 10, "banana": 20, "orange": 30}
+key_to_remove = "banana"
+# Output: {'apple': 10, 'orange': 30}
+</pre>
+
 
 # Program with solution
 1. Shortest way to check for pallindrome.
