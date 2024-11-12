@@ -2057,6 +2057,15 @@ print(final_d)
 fruits_price = {"apple": 6, "banana": 2}
 final_dict = max(fruits_price, key=fruits_price.get)
 print(final_dict)
+
+OR
+
+fruits_price = {"apple": 6, "banana": 2, 'kivi': 90}
+max_price = max(fruits_price.values())
+
+for key,val in fruits_price.items():
+    if val == max_price:
+        print(key)
 ```
 - Count Occurrences of Each Character.
 <pre>
