@@ -1984,7 +1984,7 @@ i. Using loop
 lst = []
 num = 50
 for i in range(2, num):
-    for j in range(2, 10):
+    for j in range(2, i):
         if i == j:
             continue
         if i % j == 0:
@@ -1994,7 +1994,7 @@ for i in range(2, num):
 res = [i for i in range(1, num) if i not in lst]
 print(res)
 
-
+# Below program is incorrect
 ii. Using recursion
 def prime_calc(num, lst=[]):
     if num < 3:
