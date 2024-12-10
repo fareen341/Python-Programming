@@ -2221,7 +2221,10 @@ print(math_op.add(1, 2, 3))   # Calls the method with 3 arguments
 46. What is Duck Typing?
 47. What is Abstract Base Class. Explain concrete Methods in Abstract Base Classes?
 48. Difference between Abstraction & Encapsulation?
-49. How to raise a custom exception?
+- Abstraction is hiding the unnecssary implementation from user. Like example of class i dont care.
+- Encapsulation is about hiding the internal state of an object and only allowing access to it through public methods, providing security and preventing unintended interference.
+
+50. How to raise a custom exception?
 <pre>
 class UnauthorizedUser(Exception):
     def __init__(self, message="You are Unauthorized!"):
