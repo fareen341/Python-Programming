@@ -2124,6 +2124,17 @@ t1=sorted(t,key=fun)
 print(t1)
 ```
 
+42. Sort by descending order. subject_marks = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]
+<pre>
+o/p: [('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]
+</pre>
+```python
+subject_marks = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]
+fun = lambda x: x[1]
+sort = sorted(subject_marks, key=fun, reverse=True)
+print(sort)
+```
+
 # Program with solution
 1. Shortest way to check for pallindrome.
 <pre>
