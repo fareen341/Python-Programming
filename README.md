@@ -1353,6 +1353,14 @@ my_series.to_csv('output.csv', index=False)
 
 <b>loc & iloc in pandas</b>
 <pre>
+In interview just say:
+loc is label-based indexing, used to access rows and columns by labels or boolean arrays.
+iloc is integer-based indexing, used to access rows and columns by numerical positions.
+
+Example:
+loc["a"] accesses the row with the index label 'a'.
+iloc[0] accesses the row at the 0th position, regardless of the label.
+
 Indexing:
 <b>loc example:</b>
 
