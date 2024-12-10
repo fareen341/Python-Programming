@@ -2087,15 +2087,19 @@ data = {"a": 1, "b": 2, "c": 3}
 ```python
 Using bool.
 ```
-- Sort a Dictionary by Values
-<pre>
-data = {"apple": 10, "banana": 25, "orange": 15}
-# Output (ascending): {'apple': 10, 'orange': 15, 'banana': 25}
-</pre>
+- Sort a Dictionary by Values. data = {"apple": 30, "mango": 20, "grapes": 50, "orange": 10}
 ```python
 d = {"apple": 30, "mango": 20, "grapes": 50, "orange": 10}
 t1 = sorted(d.items(), key=lambda x: x[1])
 print(dict(t1))
+
+OR, if dict is following the same key:
+like: models = [{'make':'Nokia', 'model':216, 'color':'Black'}, {'make':'Mi Max', 'model':'2', 'color':'Gold'}, {'make':'Samsung', 'model': 7, 'color':'Blue'}]
+
+Then:
+models = [{'make':'Nokia', 'model':216, 'color':'Black'}, {'make':'Mi Max', 'model':2, 'color':'Gold'}, {'make':'Samsung', 'model': 7, 'color':'Blue'}]
+res = sorted(models, key=lambda x: x['color'])
+print(res) 
 ```
 
 - Sum of All Values in a Dictionary
