@@ -2092,6 +2092,12 @@ Using bool.
 data = {"apple": 10, "banana": 25, "orange": 15}
 # Output (ascending): {'apple': 10, 'orange': 15, 'banana': 25}
 </pre>
+```python
+d = {"apple": 30, "mango": 20, "grapes": 50, "orange": 10}
+t1 = sorted(d.items(), key=lambda x: x[1])
+print(dict(t1))
+```
+
 - Sum of All Values in a Dictionary
 <pre>
 expenses = {"rent": 1200, "groceries": 300, "utilities": 150}
@@ -2110,6 +2116,13 @@ key_to_remove = "banana"
 # Output: {'apple': 10, 'orange': 30}
 </pre>
 
+41. Sort this list using 2nd index. [('a','a',2),('d','b',6),('c','c',4),('d','d',1)]
+```python
+t=[('a','a',2),('d','b',6),('c','c',4),('d','d',1)]
+fun=lambda x:x[2]
+t1=sorted(t,key=fun)
+print(t1)
+```
 
 # Program with solution
 1. Shortest way to check for pallindrome.
