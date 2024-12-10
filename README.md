@@ -2121,12 +2121,27 @@ dict1 = {"apple": 1, "banana": 2}
 dict2 = {"banana": 5, "cherry": 3}
 # Output: ['banana']
 </pre>
+```python
+dict1 = {"apple": 1, "banana": 2, 'pie': 30}
+dict2 = {"banana": 5, "cherry": 3, 'pie': 30}
+set1 = set(dict1.keys())
+set2 = set(dict2.keys())
+common_keys = set1.intersection(set2)
+print(common_keys)
+```
+
 - Remove a Key from Dictionary
 <pre>
 data = {"apple": 10, "banana": 20, "orange": 30}
 key_to_remove = "banana"
 # Output: {'apple': 10, 'orange': 30}
 </pre>
+
+```python
+data = {"apple": 10, "banana": 20, "orange": 30}
+data.pop("banana")
+print(data)
+```
 
 41. Sort this list using 2nd index. [('a','a',2),('d','b',6),('c','c',4),('d','d',1)]
 ```python
