@@ -2074,6 +2074,17 @@ max_price = max(fruits_price.values())
 for key,val in fruits_price.items():
     if val == max_price:
         print(key)
+
+OR, simple
+
+d = {"apple": 30, "mango": 20, "grapes": 50, "orange": 10}
+sorted_d = sorted(d.items(), key=lambda x: x[1])
+print(dict([sorted_d[-1]]))             # dont forget to convert it into bracket
+
+'''
+Above code return last max elemet as tuple, to convert a tuple in dict take it in bracket.
+('grapes', 50), dict([('grapes', 50)])
+'''
 ```
 - Count Occurrences of Each Character.
 <pre>
