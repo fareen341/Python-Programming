@@ -2173,6 +2173,31 @@ sort = sorted(subject_marks, key=fun, reverse=True)
 print(sort)
 ```
 
+43. Sort list without using any in-build method.
+<pre>
+Test Cases:
+# l = [3, 4, 6, 0, 30, 20, 1]
+# l = [3, 1, 2, 1]
+# l = [3, 1, 2, 1, 0]
+# l = [5, 3, 5, 1]
+# l = [-3, -1, -2, 0]
+# l = [0, 1, 0]
+</pre>
+
+```python
+index = 0
+for ele in l:
+    for i in l:
+        min_ele = l[index]
+        index_of_elem = l.index(i)
+        if min_ele < i:
+            l[index_of_elem] = l[index]
+            l[index] = i
+    index = index + 1
+
+print(l)
+```
+
 # Program with solution
 1. Shortest way to check for pallindrome.
 <pre>
