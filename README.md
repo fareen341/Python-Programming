@@ -1961,20 +1961,6 @@ print(res)
 </pre>
 
 38. Calculate sum of all elements in the list = [1, 2, [3, 4, [4, 5]]].
-<pre>
-def calculate_nested_list_sum(lst):
-    total = 0
-    for element in lst:
-        if isinstance(element, list):
-            total = total + calculate_nested_list_sum(element)
-        else:
-            total = total + element
-    return total
-
-original_list = [1, 2, [3, 4, [4, 5]]]
-result = calculate_nested_list_sum(original_list)
-print("Sum of elements in the nested list:", result)
-</pre>
 
 39. Calculate prime number in 50 range.
 <pre>
