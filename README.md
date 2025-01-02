@@ -1623,6 +1623,7 @@ res = calc_sum(l)
 print(res)
 
 # Nested list
+# This will only work for 2d list
 l = [1, 4, 6, [3, 5, 1], 7, [9, 3]]
 def calc_sum(l, total=0):
     if len(l) == 0:
@@ -1633,9 +1634,22 @@ def calc_sum(l, total=0):
         total = total + l[0]
     return calc_sum(l[1:], total)
 
-
 res = calc_sum(l)
 print(res)
+
+# This will work from 2d, 3d and so on
+l = [1, 2, [3, 4, [4, [3, 3], 5]]]
+
+def calc_sum(l, total=0):
+    if not l: 
+        return total
+    for i in l:
+        if isinstance(i, list):
+            total = calc_sum(i, total)
+        else: 
+            total += i
+    return total
+print(calc_sum(l)) 
 ```
 17. In a given list l=[1,1,1,4,5,6,5,6], count the occurance of all elements, also count the occurance of just one element `4`?</br>
 i. using collections module. </br>
