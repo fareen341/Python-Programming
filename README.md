@@ -2578,3 +2578,26 @@ reverse=False
 '''
 ```
 
+# Learning(Extra).
+- To get produe of 2 dice thrown, two coins tossed we use this module. Or to get permutations and combinations.
+- A permutation refers to an arrangement of objects in a specific order. Like if 2 balls are drown from 3, what will all possibility like it can be Red, Geen or Green, Red. So permutation get all possibility. In combination get all the possiblity without order/repeating like in permuattion we get both R, G, and G, R in combination we'll get only Red, Green.
+```python
+# Combinations
+import itertools
+
+dice_sides = ['R', 'G', 'B']
+outcomes = itertools.combinations(dice_sides, 2)
+
+# Display the outcomes
+for outcome in outcomes:
+    print(outcome)
+
+# Product
+
+coin = ['H', 'T']				# give the outcomes it can we head or tale nothing else, even if 2 coins are tossed
+outcomes = itertools.product(coin, repeat=2)	# Number of coins tossed	
+
+# Display the outcomes
+for outcome in outcomes:
+    print(outcome)
+``` 
