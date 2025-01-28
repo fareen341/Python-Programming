@@ -2405,7 +2405,10 @@ class Car:
 
 eng = Car()
 print(eng.engine_status())
-```   
+```
+
+6. Is there a toolto help find bugs or perform static analysis?
+- Flake8 is an excellent tool for static code analysis in Python and can help you find bugs, enforce style guidelines, and catch potential issues in your code. It's widely used for identifying errors and improving code quality.
 
 PENDING TOPICS:
 1. What is property in class?
