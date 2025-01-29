@@ -2198,6 +2198,29 @@ for ele in l:
 print(l)
 ```
 
+44. Sort function without using sort method
+```python
+l1 = [2, 3, 7, 9, 1, 10, 0, 8]
+
+for i in range(0, len(l1)):
+    for j in range(i+1, len(l1)):
+        if l1[i] >= l1[j]:
+            l1[i], l1[j] = l1[j], l1[i]
+
+print(l1)
+```
+
+45. Reverse name without using reverse method or any in-build method.
+```python
+name = "Fareen"
+new_name = ""
+
+for i in name:
+    new_name = i + new_name
+
+print(new_name)
+```
+
 # Program with solution
 1. Shortest way to check for pallindrome.
 <pre>
