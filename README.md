@@ -2221,6 +2221,20 @@ for i in name:
 print(new_name)
 ```
 
+46. Calculate sum of all values in nested list, num = [1, 2, [3, 4, [4, 5]]].
+```
+num = [1, 2, [3, 4, [4, 5]]]
+def calc_sum(num, total=0):
+    for i in num:
+        if isinstance(i, list):
+            total = calc_sum(i, total)
+        else:
+            total = total + i
+    return total
+
+print(calc_sum(num))
+```
+
 # Program with solution
 1. Shortest way to check for pallindrome.
 <pre>
