@@ -2253,7 +2253,12 @@ i. passing function as an argument.
 ii. returning function on return statement.
 40. Explain isinstance()
 41. Nested function, Explain Closure in Python?
-42. What is polymorphism?
+42. Explain oops concept.
+- <b>Polymorphism:</b> Overloading, and Overridding is polymorphism. 
+- <b>Overloading:</b> Same function name, same number of parameters.
+- <b>Overriding:</b> Same function name with same number of parameter but have different function definition. Example displayName function, both function has same name but one is sorting by ascending and another by descending.
+- <b>Encapsulation:</b> Encapsulation restricts direct access to class attributes and methods. It is basically used for security. 
+- <b>Abstraction:</b> It that hides unnecessary details from the user and only shows essential features
 ```python
 # Method Overloading (same method name, different parameter types or numbers)
 class MathOperations:
