@@ -2235,6 +2235,70 @@ def calc_sum(num, total=0):
 print(calc_sum(num))
 ```
 
+47. Find the First Non-Repeating Character
+```python
+char = "loveleetcode"
+res = list(filter(lambda x: char.count(x) < 2, char))
+if len(res) != 0:
+    print(char.index(res[0]))
+
+'''
+Sample inputs:
+assert first_unique_char("leetcode") == 0
+assert first_unique_char("loveleetcode") == 2
+assert first_unique_char("aabb") == -1
+'''
+```
+
+48. Find the missing number in the below un-sorted array. arr = [9,6,4,2,3,5,7,0,1,15]
+```python
+nums = [9,6,4,2,3,5,7,0,1,15]
+nums.sort()
+counter = nums[0]
+missing_nos = []
+for i in nums:
+    if i != counter:
+        for j in range(counter, i):
+            missing_nos.append(counter)
+            counter = counter + 1
+    counter = counter + 1
+
+print(missing_nos)
+```
+
+49. Rotate Array, Rotate an array to the right by k steps.
+```python
+rotate = 3
+arr = [1,2,3,4,5,6,7]
+initial_ind = 0
+for i in arr[rotate + 1:]:
+    element = i
+    arr.remove(element)
+    arr.insert(initial_ind, element)
+    initial_ind = initial_ind + 1
+
+print(f'Before rotate: {[1,2,3,4,5,6,7]} \nAfter rotate: {arr}')
+
+'''
+Test Case:
+arr = [1,2,3,4,5,6,7]
+rotate_array(arr, 3)
+assert arr == [5,6,7,1,2,3,4]
+'''
+```
+
+50. Merge all nested list into one list 
+```python
+arr = [[1,4,5],[1,3,4],[2,6]]
+merged = [*arr[0], *arr[1]]
+print(merged)
+```
+
+51. Sort array without using any sort function.
+52. Reverse array without using any inbuild function.
+53. Prime number 
+
+
 # Program with solution
 1. Shortest way to check for pallindrome.
 <pre>
