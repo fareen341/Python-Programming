@@ -1983,46 +1983,20 @@ ii.Using recursion
 
 So prime number is number which is divisible by 1 and itself, like:
 2, 3, 4, .. 19 and so on, is prime number cuz it is divisible by itself and no other number.
+
+Also a number should have two prime factors, 1 has only one so its is not prime.	
 </pre>
 
 <pre>
 <b>SOLUTION</b>
-
-i. Using loop
-lst = []
-num = 50
-for i in range(2, num):
+prime_nos = [2]
+for i in range(3, 50):
     for j in range(2, i):
-        if i == j:
-            continue
         if i % j == 0:
-            lst.append(i)
             break
-
-res = [i for i in range(1, num) if i not in lst]
-print(res)
-
-# Below program is incorrect
-ii. Using recursion
-def prime_calc(num, lst=[]):
-    if num < 3:
-        return lst
-    for i in range(2,10):
-        if num == i:
-            continue
-        if num % i == 0:
-            lst.append(num)
-            break
-    return prime_calc(num - 1)
-
-num = 50
-res = prime_calc(num)
-result = [i for i in range(1, num) if i not in res]
-print(result)
-
-<b> Also we can do:</b>
-res = set(lst) - set(non_prime)
-print("res", res)
+    else:
+        prime_nos.append(i)
+print('primt nos:', prime_nos)
 </pre>
 
 39. Calculate prime number in the given list.
