@@ -2170,6 +2170,15 @@ for ele in l:
     index = index + 1
 
 print(l)
+
+OR
+
+for i in range(0, len(l)):
+    for j in range(i+1, len(l)):
+        if l[i] > l[j]:
+            l[i], l[j] = l[j], l[i]
+
+print(l)
 ```
 
 44. Sort function without using sort method
