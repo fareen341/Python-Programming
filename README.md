@@ -296,6 +296,7 @@ Deep Copy: [1, ['Y', [3, 4], [5, 6], 7]]
 
 
 <b>Deep copy did not touch the original list, where as shallow copy change both the list</b>
+<b>We can only see the changes when taking the nested list, cuz nested list refrence changes but not in plain list.</b>
 </pre>
 
 # Conditional Execution
