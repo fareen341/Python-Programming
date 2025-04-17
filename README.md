@@ -1073,6 +1073,32 @@ r'^9\d{9}$'
 
 To be continue
 </pre>
+ - To create a pattern we can check the help(re).
+ - findall: To find all chars.
+
+ Example: Get all the numbers from some_txt, some_txt = 'skdksd09032020iuhiuy'
+```python
+searched = re.findall(r'\d+', some_txt)
+print(searched)
+```
+
+# Date Time
+- Convert string to date, it must match the format
+- Calculate difference
+- Example
+```python
+import datetime
+now = datetime.datetime.now().date()
+yesterday = datetime.datetime.strptime('2024-4-16', '%Y-%m-%d').date()
+'''
+date format should match
+If the string format is given '2024416' then the format should be '%y%m%d'
+'''
+
+diff = now - yesterday
+print(diff)			# 366 days, 0:00:00
+```
+ 
 
 # Pickling and Unpicling
 1. Serializer is converting python complex datatype into json.
