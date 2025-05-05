@@ -2526,6 +2526,14 @@ print(eng.engine_status())
 6. Is there a toolto help find bugs or perform static analysis?
 - Flake8 is an excellent tool for static code analysis in Python and can help you find bugs, enforce style guidelines, and catch potential issues in your code. It's widely used for identifying errors and improving code quality.
 
+7. how python is dynamically typed?
+- Python is dynamically typed because you don't need to declare variable types explicitly — Python determines the type at runtime, based on the value assigned.
+
+8. Difference between 'f' and 'r' string in python?
+- Use f string for formatting string.
+- Use r as a raw string, expecially used in regular expression to not make '\n' work as new line.
+
+
 PENDING TOPICS:
 1. What is property in class?
 2. What is GC and how does GC works?
