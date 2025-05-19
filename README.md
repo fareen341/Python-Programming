@@ -2315,7 +2315,12 @@ print(merged)
 
 51. Sort array without using any sort function.
 52. Reverse array without using any inbuild function.
-53. Prime number 
+53. Prime number
+54. Leap year check?
+```python
+year = int(input("Enter a year: "))
+print("Leap year" if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0) else "Not a leap year")
+```
 
 
 # Program with solution
