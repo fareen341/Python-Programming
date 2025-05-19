@@ -2170,6 +2170,14 @@ t=[('a','a',2),('d','b',6),('c','c',4),('d','d',1)]
 fun=lambda x:x[2]
 t1=sorted(t,key=fun)
 print(t1)
+
+# Without using sort function:
+for i in range(len(l)):
+    for j in range(len(l) -1):
+        if l[i][2] < l[j][2]:
+            l[i], l[j] = l[j], l[i]
+
+print(l)
 ```
 
 42. Sort by descending order. subject_marks = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]
@@ -2181,6 +2189,15 @@ subject_marks = [('English', 88), ('Science', 90), ('Maths', 97), ('Social scien
 fun = lambda x: x[1]
 sort = sorted(subject_marks, key=fun, reverse=True)
 print(sort)
+
+# Sort without using any in-build method
+towns = [{'name': 'Manchester', 'population': 2}, {'name': 'Coventry', 'population': 1}, {'name': 'South Windsor', 'population': 6}]
+for i in range(len(towns)):
+    for j in range(len(towns) -1):
+        if towns[i]['population'] < towns[j]['population']:
+            towns[i], towns[j] = towns[j], towns[i]
+
+print(towns)
 ```
 
 43. Sort list without using any in-build method.
