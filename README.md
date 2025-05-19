@@ -2548,7 +2548,15 @@ PENDING TOPICS:
 2. What is GC and how does GC works?
 3. Is all the memory freed when Python exits?
 4. How memory is managed in Python?
-
+- All objects are stored in private heap
+- Python does refrence counting, if counting reaches 0, memory is freed.
+- ```python
+	a = [1, 2, 3]
+	b = a   # ref count = 2
+	del a   # ref count = 1
+	del b   # ref count = 0 → memory is freed
+  ```
+- Python uses gc to remove the circular refrence(objects referencing each other).
 
 
 # Interview Questions with answer:
