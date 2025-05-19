@@ -2714,6 +2714,22 @@ reverse=False
 '''
 ```
 
+# Questions Related To Date
+1. Get today’s date and time.
+2. Find the number of days between two dates.
+3 .Check if a given year is a leap year.
+4. Add 30 days to the current date.
+5. Get the weekday name of a given date (e.g., "Monday").
+6. Format a date as "DD-MM-YYYY" or "YYYY/MM/DD".
+7. Get the first and last day of the current month.
+8. Write a function that returns age given a birthdate.
+9. Sort a list of date strings. Input: ["2022-03-15", "2021-01-01", "2023-07-25"]
+10. Find all dates between two dates.
+11. Check if a date is in the past or future compared to today.
+12. Generate a list of next 7 days from today.
+13. Given a timestamp, convert it to human-readable date.
+14. How to get the current UTC time?
+
 # Learning(Extra).
 - To get produe of 2 dice thrown, two coins tossed we use this module. Or to get permutations and combinations.
 - A permutation refers to an arrangement of objects in a specific order. Like if 2 balls are drown from 3, what will all possibility like it can be Red, Geen or Green, Red. So permutation get all possibility. In combination get all the possiblity without order/repeating like in permuattion we get both R, G, and G, R in combination we'll get only Red, Green.
