@@ -2643,10 +2643,32 @@ Instance Method: Method of the class, which uses self.
 10. What is os and explain few operations on os?
 
 11. What is MultiProcessing & MultiThreading?
-<pre>
-Difference in MultiProcessing & MultiThreading is MultiProcessing involves multiple processes and MultiThreading use different shards in one single process.
-Give example program: see above
-</pre>
+- MultiThreading is used for i/o bound tasks like downloading files.
+- Normal function wait, threading run all parallelly.
+- Its like downloading multiple files parallely.
+- ```python
+	import time
+	import threading
+	
+	
+	# Normal call, wait
+	def call_me(n):
+	    time.sleep(n)
+	    print(f'Calling now...')
+	
+	call_me(5)
+	call_me(4)
+	call_me(3)
+	
+	# Using thread without wait
+	# t1 = threading.Thread(target=call_me, args=[4])
+	# t2 = threading.Thread(target=call_me, args=[3])
+	# t3 = threading.Thread(target=call_me, args=[2])
+	
+	# t1.start()
+	# t2.start()
+	# t3.start()
+  ```
 
 20. How do you iterate over a list and pull element index at the same time?
 <pre>
