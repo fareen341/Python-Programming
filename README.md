@@ -2564,6 +2564,8 @@ print(eng.engine_status())
 - Use f string for formatting string.
 - Use r as a raw string, expecially used in regular expression to not make '\n' work as new line.
 
+9. What is GIL?
+Imagine you have one crayon and two kids who both want to draw. Even if you have a big table (many CPU cores), only one kid can use the crayon at a time. When one kid is drawing, the other has to wait. After a little while, they swap and the other kid gets the crayon. That one crayon is the GIL — it’s a special rule in Python that says only one thing can be “writing” Python code at a time in a single program, even if you have multiple helpers (threads). If you want both kids drawing at the same time, you have to give each kid their own crayon and paper — in Python, that means using multiprocessing, where each process has its own GIL.
 
 PENDING TOPICS:
 1. What is property in class?
