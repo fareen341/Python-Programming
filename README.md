@@ -2025,14 +2025,16 @@ Also a number should have two prime factors, 1 has only one so its is not prime.
 
 <pre>
 <b>SOLUTION</b>
-prime_nos = [2]
-for i in range(3, 50):
-    for j in range(2, i):
+l = []
+
+for i in range(2, 50):
+    for j in range(2, int(i ** 0.5) + 1):
         if i % j == 0:
             break
     else:
-        prime_nos.append(i)
-print('primt nos:', prime_nos)
+        l.append(i)
+
+print(l)
 </pre>
 
 39. Calculate prime number in the given list.
