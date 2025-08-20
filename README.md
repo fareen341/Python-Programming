@@ -2808,4 +2808,14 @@ outcomes = itertools.product(coin, repeat=2)	# Number of coins tossed
 # Display the outcomes
 for outcome in outcomes:
     print(outcome)
-``` 
+```
+
+# To create virtual env
+```python
+'''
+python3 -m venv myvenv
+source venv/bin/activate   # On macOS/Linux
+venv\Scripts\activate      # On Windows
+pip3 install -r requirements.txt
+'''
+```
