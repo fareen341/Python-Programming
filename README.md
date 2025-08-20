@@ -2814,8 +2814,8 @@ for outcome in outcomes:
 ```python
 '''
 python3 -m venv myvenv
-source venv/bin/activate   # On macOS/Linux
-venv\Scripts\activate      # On Windows
+source myvenv/bin/activate   # On macOS/Linux
+myvenv\Scripts\activate      # On Windows
 pip3 install -r requirements.txt
 '''
 ```
