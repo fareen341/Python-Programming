@@ -2812,10 +2812,14 @@ for outcome in outcomes:
 
 # To create virtual env
 ```python
+To activate:
 '''
 python3 -m venv myvenv
 source myvenv/bin/activate   # On macOS/Linux
 myvenv\Scripts\activate      # On Windows
 pip3 install -r requirements.txt
 '''
+
+To deactivate:
+$ deactivate
 ```
